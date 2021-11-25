@@ -1,0 +1,1124 @@
+2021-11-20 16:29:37 | INFO | fairseq.distributed_utils | distributed init (rank 3): tcp://localhost:13246
+2021-11-20 16:29:37 | INFO | fairseq.distributed_utils | distributed init (rank 1): tcp://localhost:13246
+2021-11-20 16:29:37 | INFO | fairseq.distributed_utils | distributed init (rank 2): tcp://localhost:13246
+2021-11-20 16:29:37 | INFO | fairseq.distributed_utils | distributed init (rank 0): tcp://localhost:13246
+2021-11-20 16:29:38 | INFO | fairseq.distributed_utils | initialized host ip-219-216-64-168.neu.edu.cn as rank 3
+2021-11-20 16:29:38 | INFO | fairseq.distributed_utils | initialized host ip-219-216-64-168.neu.edu.cn as rank 1
+2021-11-20 16:29:38 | INFO | fairseq.distributed_utils | initialized host ip-219-216-64-168.neu.edu.cn as rank 2
+2021-11-20 16:29:38 | INFO | fairseq.distributed_utils | initialized host ip-219-216-64-168.neu.edu.cn as rank 0
+2021-11-20 16:29:41 | INFO | fairseq_cli.train | Namespace(activation_dropout=0.1, activation_fn='relu', adam_betas='(0.9, 0.98)', adam_eps=1e-08, adaptive_input=False, adaptive_softmax_cutoff=None, adaptive_softmax_dropout=0, all_gather_list_size=16384, arch='transformer_iwslt_de_en', attention_dropout=0.1, best_checkpoint_metric='loss', bf16=False, bpe=None, broadcast_buffers=False, bucket_cap_mb=25, checkpoint_suffix='', clip_norm=0.0, cpu=False, criterion='label_smoothed_cross_entropy', cross_self_attention=False, curriculum=0, data='data-bin/iwslt14de2en', data_buffer_size=10, dataset_impl=None, ddp_backend='no_c10d', decay_num=100000, decoder_attention_heads=4, decoder_embed_dim=512, decoder_embed_path=None, decoder_ffn_embed_dim=1024, decoder_input_dim=512, decoder_layerdrop=0, decoder_layers=6, decoder_layers_to_keep=None, decoder_learned_pos=False, decoder_normalize_before=False, decoder_output_dim=512, device_id=0, difficult_queue_size=20000, disable_validation=False, distil_curiosity_rate=0.75, distil_rate=0.5, distil_rate_decrease_start_step=-1, distil_schedule='unchange', distil_strategy='normal', distil_weight_strategy='', distributed_backend='nccl', distributed_init_method='tcp://localhost:13246', distributed_no_spawn=False, distributed_port=-1, distributed_rank=0, distributed_world_size=4, distributed_wrapper='DDP', dropout=0.2, embedding_alpha=1.0, embedding_norm='', empty_cache_freq=0, encoder_attention_heads=4, encoder_embed_dim=512, encoder_embed_path=None, encoder_ffn_embed_dim=1024, encoder_layerdrop=0, encoder_layers=6, encoder_layers_to_keep=None, encoder_learned_pos=False, encoder_normalize_before=False, eval_bleu=False, eval_bleu_args=None, eval_bleu_detok='space', eval_bleu_detok_args=None, eval_bleu_print_samples=False, eval_bleu_remove_bpe=None, eval_tokenized_bleu=False, fast_stat_sync=False, find_unused_parameters=False, finetune_from_model=None, fix_batches_to_gpus=False, fixed_validation_seed=None, fp16=True, fp16_init_scale=128, fp16_no_flatten_grads=False, fp16_scale_tolerance=0.0, fp16_scale_window=None, k_only=False, kd_rescale=1.0, keep_best_checkpoints=-1, keep_interval_updates=-1, keep_last_epochs=20, kl_loss_combine_rate=0.5, label_smoothing=0.1, layernorm_embedding=False, left_pad_source='True', left_pad_target='False', load_alignments=False, localsgd_frequency=3, log_format='tqdm', log_interval=100, lr=[0.0007], lr_scheduler='inverse_sqrt', max_epoch=100, max_relative_length=-1, max_sentences=None, max_sentences_valid=None, max_source_positions=1024, max_target_positions=1024, max_tokens=4096, max_tokens_valid=4096, max_update=0, maximize_best_checkpoint_metric=False, memory_efficient_bf16=False, memory_efficient_fp16=False, min_loss_scale=0.0001, min_lr=1e-09, mix_schedule='teacher', model_parallel_size=1, no_cross_attention=False, no_epoch_checkpoints=False, no_last_checkpoints=False, no_progress_bar=True, no_save=False, no_save_optimizer_state=False, no_scale_embedding=False, no_seed_provided=False, no_token_positional_embeddings=False, nprocs_per_node=4, num_batch_buckets=0, num_workers=1, open_noise_teacher=False, optimizer='adam', optimizer_overrides='{}', patience=-1, predict_change_margin=0.23, profile=False, quant_noise_pq=0, quant_noise_pq_block_size=8, quant_noise_scalar=0, quantization_config_path=None, required_batch_size_multiple=8, reset_dataloader=False, reset_lr_scheduler=False, reset_meters=False, reset_optimizer=False, restore_file='checkpoint_last.pt', save_dir='checkpoints/base-iwlst-de-en/transformer_iwlst14de2en', save_interval=1, save_interval_updates=0, seed=2128977, sentence_avg=False, share_all_embeddings=True, share_decoder_input_output_embed=False, sigmoid_alpha=10, sigmoid_mid=0.5, skip_invalid_size_inputs_valid_test=False, slowmo_algorithm='LocalSGD', slowmo_momentum=None, soft_range=1.0, source_lang='de', stop_time_hours=0, target_lang='en', task='translation', teacher_ckpt_path='', teacher_decoder_layers=6, teacher_distil_rate=0.5, teacher_encoder_layers=6, teacher_predict_temperature=1.0, teacher_predict_temperature_schedule='none', teacher_strategy='', tensorboard_logdir='', threshold_loss_scale=None, tie_adaptive_weights=False, tokenizer=None, tpu=False, train_subset='train', truncate_source=False, update_freq=[2], upsample_primary=1, use_bmuf=False, use_distillation=False, use_old_adam=False, user_dir=None, valid_subset='valid', validate_after_updates=0, validate_interval=1, validate_interval_updates=0, warmup_init_lr=1e-07, warmup_updates=6000, weight_decay=0.0001, zero_first_token=False)
+2021-11-20 16:29:41 | INFO | fairseq.tasks.translation | [de] dictionary: 10152 types
+2021-11-20 16:29:41 | INFO | fairseq.tasks.translation | [en] dictionary: 10152 types
+2021-11-20 16:29:41 | INFO | fairseq.data.data_utils | loaded 7283 examples from: data-bin/iwslt14de2en/valid.de-en.de
+2021-11-20 16:29:41 | INFO | fairseq.data.data_utils | loaded 7283 examples from: data-bin/iwslt14de2en/valid.de-en.en
+2021-11-20 16:29:41 | INFO | fairseq.tasks.translation | data-bin/iwslt14de2en valid de-en 7283 examples
+2021-11-20 16:29:42 | INFO | fairseq_cli.train | TransformerModel(
+  (encoder): TransformerEncoder(
+    (dropout_module): FairseqDropout()
+    (embed_tokens): Embedding(10152, 512, padding_idx=1)
+    (embed_positions): SinusoidalPositionalEmbedding()
+    (layers): ModuleList(
+      (0): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (dropout_module): FairseqDropout()
+          (k_proj): Linear(in_features=512, out_features=512, bias=True)
+          (v_proj): Linear(in_features=512, out_features=512, bias=True)
+          (q_proj): Linear(in_features=512, out_features=512, bias=True)
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (dropout_module): FairseqDropout()
+        (activation_dropout_module): FairseqDropout()
+        (fc1): Linear(in_features=512, out_features=1024, bias=True)
+        (fc2): Linear(in_features=1024, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (1): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (dropout_module): FairseqDropout()
+          (k_proj): Linear(in_features=512, out_features=512, bias=True)
+          (v_proj): Linear(in_features=512, out_features=512, bias=True)
+          (q_proj): Linear(in_features=512, out_features=512, bias=True)
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (dropout_module): FairseqDropout()
+        (activation_dropout_module): FairseqDropout()
+        (fc1): Linear(in_features=512, out_features=1024, bias=True)
+        (fc2): Linear(in_features=1024, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (2): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (dropout_module): FairseqDropout()
+          (k_proj): Linear(in_features=512, out_features=512, bias=True)
+          (v_proj): Linear(in_features=512, out_features=512, bias=True)
+          (q_proj): Linear(in_features=512, out_features=512, bias=True)
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (dropout_module): FairseqDropout()
+        (activation_dropout_module): FairseqDropout()
+        (fc1): Linear(in_features=512, out_features=1024, bias=True)
+        (fc2): Linear(in_features=1024, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (3): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (dropout_module): FairseqDropout()
+          (k_proj): Linear(in_features=512, out_features=512, bias=True)
+          (v_proj): Linear(in_features=512, out_features=512, bias=True)
+          (q_proj): Linear(in_features=512, out_features=512, bias=True)
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (dropout_module): FairseqDropout()
+        (activation_dropout_module): FairseqDropout()
+        (fc1): Linear(in_features=512, out_features=1024, bias=True)
+        (fc2): Linear(in_features=1024, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (4): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (dropout_module): FairseqDropout()
+          (k_proj): Linear(in_features=512, out_features=512, bias=True)
+          (v_proj): Linear(in_features=512, out_features=512, bias=True)
+          (q_proj): Linear(in_features=512, out_features=512, bias=True)
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (dropout_module): FairseqDropout()
+        (activation_dropout_module): FairseqDropout()
+        (fc1): Linear(in_features=512, out_features=1024, bias=True)
+        (fc2): Linear(in_features=1024, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (5): TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (dropout_module): FairseqDropout()
+          (k_proj): Linear(in_features=512, out_features=512, bias=True)
+          (v_proj): Linear(in_features=512, out_features=512, bias=True)
+          (q_proj): Linear(in_features=512, out_features=512, bias=True)
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (dropout_module): FairseqDropout()
+        (activation_dropout_module): FairseqDropout()
+        (fc1): Linear(in_features=512, out_features=1024, bias=True)
+        (fc2): Linear(in_features=1024, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+    )
+  )
+  (decoder): TransformerDecoder(
+    (dropout_module): FairseqDropout()
+    (embed_tokens): Embedding(10152, 512, padding_idx=1)
+    (embed_positions): SinusoidalPositionalEmbedding()
+    (layers): ModuleList(
+      (0): TransformerDecoderLayer(
+        (dropout_module): FairseqDropout()
+        (self_attn): MultiheadAttention(
+          (dropout_module): FairseqDropout()
+          (k_proj): Linear(in_features=512, out_features=512, bias=True)
+          (v_proj): Linear(in_features=512, out_features=512, bias=True)
+          (q_proj): Linear(in_features=512, out_features=512, bias=True)
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (activation_dropout_module): FairseqDropout()
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (dropout_module): FairseqDropout()
+          (k_proj): Linear(in_features=512, out_features=512, bias=True)
+          (v_proj): Linear(in_features=512, out_features=512, bias=True)
+          (q_proj): Linear(in_features=512, out_features=512, bias=True)
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=1024, bias=True)
+        (fc2): Linear(in_features=1024, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (1): TransformerDecoderLayer(
+        (dropout_module): FairseqDropout()
+        (self_attn): MultiheadAttention(
+          (dropout_module): FairseqDropout()
+          (k_proj): Linear(in_features=512, out_features=512, bias=True)
+          (v_proj): Linear(in_features=512, out_features=512, bias=True)
+          (q_proj): Linear(in_features=512, out_features=512, bias=True)
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (activation_dropout_module): FairseqDropout()
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (dropout_module): FairseqDropout()
+          (k_proj): Linear(in_features=512, out_features=512, bias=True)
+          (v_proj): Linear(in_features=512, out_features=512, bias=True)
+          (q_proj): Linear(in_features=512, out_features=512, bias=True)
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=1024, bias=True)
+        (fc2): Linear(in_features=1024, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (2): TransformerDecoderLayer(
+        (dropout_module): FairseqDropout()
+        (self_attn): MultiheadAttention(
+          (dropout_module): FairseqDropout()
+          (k_proj): Linear(in_features=512, out_features=512, bias=True)
+          (v_proj): Linear(in_features=512, out_features=512, bias=True)
+          (q_proj): Linear(in_features=512, out_features=512, bias=True)
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (activation_dropout_module): FairseqDropout()
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (dropout_module): FairseqDropout()
+          (k_proj): Linear(in_features=512, out_features=512, bias=True)
+          (v_proj): Linear(in_features=512, out_features=512, bias=True)
+          (q_proj): Linear(in_features=512, out_features=512, bias=True)
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=1024, bias=True)
+        (fc2): Linear(in_features=1024, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (3): TransformerDecoderLayer(
+        (dropout_module): FairseqDropout()
+        (self_attn): MultiheadAttention(
+          (dropout_module): FairseqDropout()
+          (k_proj): Linear(in_features=512, out_features=512, bias=True)
+          (v_proj): Linear(in_features=512, out_features=512, bias=True)
+          (q_proj): Linear(in_features=512, out_features=512, bias=True)
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (activation_dropout_module): FairseqDropout()
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (dropout_module): FairseqDropout()
+          (k_proj): Linear(in_features=512, out_features=512, bias=True)
+          (v_proj): Linear(in_features=512, out_features=512, bias=True)
+          (q_proj): Linear(in_features=512, out_features=512, bias=True)
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=1024, bias=True)
+        (fc2): Linear(in_features=1024, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (4): TransformerDecoderLayer(
+        (dropout_module): FairseqDropout()
+        (self_attn): MultiheadAttention(
+          (dropout_module): FairseqDropout()
+          (k_proj): Linear(in_features=512, out_features=512, bias=True)
+          (v_proj): Linear(in_features=512, out_features=512, bias=True)
+          (q_proj): Linear(in_features=512, out_features=512, bias=True)
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (activation_dropout_module): FairseqDropout()
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (dropout_module): FairseqDropout()
+          (k_proj): Linear(in_features=512, out_features=512, bias=True)
+          (v_proj): Linear(in_features=512, out_features=512, bias=True)
+          (q_proj): Linear(in_features=512, out_features=512, bias=True)
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=1024, bias=True)
+        (fc2): Linear(in_features=1024, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+      (5): TransformerDecoderLayer(
+        (dropout_module): FairseqDropout()
+        (self_attn): MultiheadAttention(
+          (dropout_module): FairseqDropout()
+          (k_proj): Linear(in_features=512, out_features=512, bias=True)
+          (v_proj): Linear(in_features=512, out_features=512, bias=True)
+          (q_proj): Linear(in_features=512, out_features=512, bias=True)
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (activation_dropout_module): FairseqDropout()
+        (self_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (encoder_attn): MultiheadAttention(
+          (dropout_module): FairseqDropout()
+          (k_proj): Linear(in_features=512, out_features=512, bias=True)
+          (v_proj): Linear(in_features=512, out_features=512, bias=True)
+          (q_proj): Linear(in_features=512, out_features=512, bias=True)
+          (out_proj): Linear(in_features=512, out_features=512, bias=True)
+        )
+        (encoder_attn_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+        (fc1): Linear(in_features=512, out_features=1024, bias=True)
+        (fc2): Linear(in_features=1024, out_features=512, bias=True)
+        (final_layer_norm): LayerNorm((512,), eps=1e-05, elementwise_affine=True)
+      )
+    )
+    (output_projection): Linear(in_features=512, out_features=10152, bias=False)
+  )
+)
+2021-11-20 16:29:42 | INFO | fairseq_cli.train | task: translation (TranslationTask)
+2021-11-20 16:29:42 | INFO | fairseq_cli.train | model: transformer_iwslt_de_en (TransformerModel)
+2021-11-20 16:29:42 | INFO | fairseq_cli.train | criterion: label_smoothed_cross_entropy (LabelSmoothedCrossEntropyCriterion)
+2021-11-20 16:29:42 | INFO | fairseq_cli.train | num. model params: 36741120 (num. trained: 36741120)
+2021-11-20 16:29:42 | INFO | fairseq.trainer | detected shared parameter: encoder.embed_tokens.weight <- decoder.embed_tokens.weight
+2021-11-20 16:29:42 | INFO | fairseq.trainer | detected shared parameter: encoder.embed_tokens.weight <- decoder.output_projection.weight
+2021-11-20 16:29:42 | INFO | fairseq.utils | ***********************CUDA enviroments for all 4 workers***********************
+2021-11-20 16:29:42 | INFO | fairseq.utils | rank   0: capabilities =  6.1  ; total memory = 11.910 GB ; name = TITAN X (Pascal)                        
+2021-11-20 16:29:42 | INFO | fairseq.utils | rank   1: capabilities =  6.1  ; total memory = 11.910 GB ; name = TITAN X (Pascal)                        
+2021-11-20 16:29:42 | INFO | fairseq.utils | rank   2: capabilities =  6.1  ; total memory = 11.910 GB ; name = TITAN X (Pascal)                        
+2021-11-20 16:29:42 | INFO | fairseq.utils | rank   3: capabilities =  6.1  ; total memory = 11.910 GB ; name = TITAN X (Pascal)                        
+2021-11-20 16:29:42 | INFO | fairseq.utils | ***********************CUDA enviroments for all 4 workers***********************
+2021-11-20 16:29:42 | INFO | fairseq_cli.train | training on 4 devices (GPUs/TPUs)
+2021-11-20 16:29:42 | INFO | fairseq_cli.train | max tokens per GPU = 4096 and max sentences per GPU = None
+2021-11-20 16:29:42 | INFO | fairseq.trainer | no existing checkpoint found checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint_last.pt
+2021-11-20 16:29:42 | INFO | fairseq.trainer | loading train data for epoch 1
+2021-11-20 16:29:42 | INFO | fairseq.data.data_utils | loaded 160239 examples from: data-bin/iwslt14de2en/train.de-en.de
+2021-11-20 16:29:42 | INFO | fairseq.data.data_utils | loaded 160239 examples from: data-bin/iwslt14de2en/train.de-en.en
+2021-11-20 16:29:42 | INFO | fairseq.tasks.translation | data-bin/iwslt14de2en train de-en 160239 examples
+2021-11-20 16:29:42 | INFO | fairseq.trainer | NOTE: your device does NOT support faster training with --fp16, please switch to FP32 which is likely to be faster
+2021-11-20 16:29:42 | INFO | fairseq.trainer | begin training epoch 1
+2021-11-20 16:29:45 | INFO | fairseq.trainer | NOTE: overflow detected, setting loss scale to: 64.0
+2021-11-20 16:29:45 | INFO | fairseq.trainer | NOTE: overflow detected, setting loss scale to: 32.0
+2021-11-20 16:30:24 | INFO | train_inner | epoch 001:    102 / 138 loss=12.499, nll_loss=12.322, distil_rate=0, ppl=5118.56, wps=74281.7, ups=2.59, wpb=28691.9, bsz=1137.6, num_updates=100, lr=1.1765e-05, gnorm=3.179, loss_scale=32, train_wall=39, wall=42
+2021-11-20 16:30:38 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:30:41 | INFO | valid | epoch 001 | valid on 'valid' subset | loss 10.918 | nll_loss 10.549 | distil_rate 0 | ppl 1497.84 | wps 181744 | wpb 11163.9 | bsz 455.2 | num_updates 136
+2021-11-20 16:30:41 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:30:42 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint1.pt (epoch 1 @ 136 updates, score 10.918) (writing took 1.4616609839868033 seconds)
+2021-11-20 16:30:42 | INFO | fairseq_cli.train | end of epoch 1 (average epoch stats below)
+2021-11-20 16:30:42 | INFO | train | epoch 001 | loss 12.166 | nll_loss 11.95 | distil_rate 0 | ppl 3956.07 | wps 68036.3 | ups 2.39 | wpb 28515.6 | bsz 1155.5 | num_updates 136 | lr 1.59644e-05 | gnorm 2.643 | loss_scale 32 | train_wall 54 | wall 60
+2021-11-20 16:30:42 | INFO | fairseq.trainer | begin training epoch 2
+2021-11-20 16:31:09 | INFO | train_inner | epoch 002:     64 / 138 loss=10.867, nll_loss=10.498, distil_rate=0, ppl=1446.6, wps=63227.1, ups=2.22, wpb=28501.4, bsz=1190.6, num_updates=200, lr=2.343e-05, gnorm=1.184, loss_scale=32, train_wall=39, wall=87
+2021-11-20 16:31:38 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:31:41 | INFO | valid | epoch 002 | valid on 'valid' subset | loss 9.635 | nll_loss 9.052 | distil_rate 0 | ppl 530.88 | wps 185261 | wpb 11163.9 | bsz 455.2 | num_updates 274 | best_loss 9.635
+2021-11-20 16:31:41 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:31:48 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint2.pt (epoch 2 @ 274 updates, score 9.635) (writing took 7.272625874989899 seconds)
+2021-11-20 16:31:48 | INFO | fairseq_cli.train | end of epoch 2 (average epoch stats below)
+2021-11-20 16:31:48 | INFO | train | epoch 002 | loss 10.313 | nll_loss 9.863 | distil_rate 0 | ppl 931.54 | wps 59849.1 | ups 2.1 | wpb 28542.2 | bsz 1157.8 | num_updates 274 | lr 3.20621e-05 | gnorm 1.169 | loss_scale 32 | train_wall 54 | wall 126
+2021-11-20 16:31:48 | INFO | fairseq.trainer | begin training epoch 3
+2021-11-20 16:32:00 | INFO | train_inner | epoch 003:     26 / 138 loss=9.916, nll_loss=9.399, distil_rate=0, ppl=674.98, wps=55577, ups=1.96, wpb=28403.6, bsz=1142.3, num_updates=300, lr=3.5095e-05, gnorm=1.163, loss_scale=32, train_wall=39, wall=138
+2021-11-20 16:32:39 | INFO | train_inner | epoch 003:    126 / 138 loss=9.472, nll_loss=8.847, distil_rate=0, ppl=460.61, wps=73208.8, ups=2.55, wpb=28683.2, bsz=1178.2, num_updates=400, lr=4.676e-05, gnorm=1.167, loss_scale=32, train_wall=39, wall=177
+2021-11-20 16:32:44 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:32:47 | INFO | valid | epoch 003 | valid on 'valid' subset | loss 9.25 | nll_loss 8.542 | distil_rate 0 | ppl 372.78 | wps 167642 | wpb 11163.9 | bsz 455.2 | num_updates 412 | best_loss 9.25
+2021-11-20 16:32:47 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:32:54 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint3.pt (epoch 3 @ 412 updates, score 9.25) (writing took 7.019120052005746 seconds)
+2021-11-20 16:32:54 | INFO | fairseq_cli.train | end of epoch 3 (average epoch stats below)
+2021-11-20 16:32:54 | INFO | train | epoch 003 | loss 9.506 | nll_loss 8.89 | distil_rate 0 | ppl 474.57 | wps 59850.5 | ups 2.1 | wpb 28537.8 | bsz 1159.4 | num_updates 412 | lr 4.81598e-05 | gnorm 1.177 | loss_scale 32 | train_wall 54 | wall 192
+2021-11-20 16:32:54 | INFO | fairseq.trainer | begin training epoch 4
+2021-11-20 16:33:30 | INFO | train_inner | epoch 004:     88 / 138 loss=9.191, nll_loss=8.51, distil_rate=0, ppl=364.65, wps=56317.8, ups=1.97, wpb=28611, bsz=1140.2, num_updates=500, lr=5.8425e-05, gnorm=1.158, loss_scale=32, train_wall=39, wall=228
+2021-11-20 16:33:50 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:33:53 | INFO | valid | epoch 004 | valid on 'valid' subset | loss 8.741 | nll_loss 7.98 | distil_rate 0 | ppl 252.43 | wps 174774 | wpb 11163.9 | bsz 455.2 | num_updates 550 | best_loss 8.741
+2021-11-20 16:33:53 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:34:00 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint4.pt (epoch 4 @ 550 updates, score 8.741) (writing took 7.876404356997227 seconds)
+2021-11-20 16:34:00 | INFO | fairseq_cli.train | end of epoch 4 (average epoch stats below)
+2021-11-20 16:34:00 | INFO | train | epoch 004 | loss 9.077 | nll_loss 8.378 | distil_rate 0 | ppl 332.61 | wps 59241.9 | ups 2.08 | wpb 28535.3 | bsz 1157.7 | num_updates 550 | lr 6.42575e-05 | gnorm 1.26 | loss_scale 32 | train_wall 54 | wall 258
+2021-11-20 16:34:00 | INFO | fairseq.trainer | begin training epoch 5
+2021-11-20 16:34:22 | INFO | train_inner | epoch 005:     50 / 138 loss=8.837, nll_loss=8.1, distil_rate=0, ppl=274.45, wps=54768.9, ups=1.93, wpb=28401.7, bsz=1171.1, num_updates=600, lr=7.009e-05, gnorm=1.419, loss_scale=32, train_wall=39, wall=280
+2021-11-20 16:34:56 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:34:59 | INFO | valid | epoch 005 | valid on 'valid' subset | loss 8.317 | nll_loss 7.468 | distil_rate 0 | ppl 177 | wps 166720 | wpb 11163.9 | bsz 455.2 | num_updates 688 | best_loss 8.317
+2021-11-20 16:34:59 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:35:07 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint5.pt (epoch 5 @ 688 updates, score 8.317) (writing took 7.69029768499604 seconds)
+2021-11-20 16:35:07 | INFO | fairseq_cli.train | end of epoch 5 (average epoch stats below)
+2021-11-20 16:35:07 | INFO | train | epoch 005 | loss 8.636 | nll_loss 7.866 | distil_rate 0 | ppl 233.36 | wps 59081.7 | ups 2.07 | wpb 28531.9 | bsz 1154.8 | num_updates 688 | lr 8.03552e-05 | gnorm 1.276 | loss_scale 32 | train_wall 54 | wall 325
+2021-11-20 16:35:07 | INFO | fairseq.trainer | begin training epoch 6
+2021-11-20 16:35:13 | INFO | train_inner | epoch 006:     12 / 138 loss=8.558, nll_loss=7.776, distil_rate=0, ppl=219.21, wps=55292.2, ups=1.95, wpb=28402.9, bsz=1129.7, num_updates=700, lr=8.1755e-05, gnorm=1.277, loss_scale=32, train_wall=39, wall=331
+2021-11-20 16:35:53 | INFO | train_inner | epoch 006:    112 / 138 loss=8.253, nll_loss=7.424, distil_rate=0, ppl=171.68, wps=72319.5, ups=2.51, wpb=28793.3, bsz=1174.7, num_updates=800, lr=9.342e-05, gnorm=1.056, loss_scale=32, train_wall=40, wall=371
+2021-11-20 16:36:03 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:36:06 | INFO | valid | epoch 006 | valid on 'valid' subset | loss 7.928 | nll_loss 6.996 | distil_rate 0 | ppl 127.67 | wps 185232 | wpb 11163.9 | bsz 455.2 | num_updates 826 | best_loss 7.928
+2021-11-20 16:36:06 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:36:13 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint6.pt (epoch 6 @ 826 updates, score 7.928) (writing took 6.62006694500451 seconds)
+2021-11-20 16:36:13 | INFO | fairseq_cli.train | end of epoch 6 (average epoch stats below)
+2021-11-20 16:36:13 | INFO | train | epoch 006 | loss 8.252 | nll_loss 7.422 | distil_rate 0 | ppl 171.53 | wps 59764.9 | ups 2.09 | wpb 28537.9 | bsz 1156.7 | num_updates 826 | lr 9.64529e-05 | gnorm 1.152 | loss_scale 32 | train_wall 54 | wall 391
+2021-11-20 16:36:13 | INFO | fairseq.trainer | begin training epoch 7
+2021-11-20 16:36:44 | INFO | train_inner | epoch 007:     74 / 138 loss=8.002, nll_loss=7.134, distil_rate=0, ppl=140.41, wps=56343, ups=1.98, wpb=28426.4, bsz=1163.7, num_updates=900, lr=0.000105085, gnorm=1.095, loss_scale=32, train_wall=39, wall=422
+2021-11-20 16:37:09 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:37:12 | INFO | valid | epoch 007 | valid on 'valid' subset | loss 7.566 | nll_loss 6.581 | distil_rate 0 | ppl 95.76 | wps 179437 | wpb 11163.9 | bsz 455.2 | num_updates 964 | best_loss 7.566
+2021-11-20 16:37:12 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:37:20 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint7.pt (epoch 7 @ 964 updates, score 7.566) (writing took 8.12154670599557 seconds)
+2021-11-20 16:37:20 | INFO | fairseq_cli.train | end of epoch 7 (average epoch stats below)
+2021-11-20 16:37:20 | INFO | train | epoch 007 | loss 7.901 | nll_loss 7.017 | distil_rate 0 | ppl 129.52 | wps 58980.2 | ups 2.07 | wpb 28545.3 | bsz 1155 | num_updates 964 | lr 0.000112551 | gnorm 1.063 | loss_scale 32 | train_wall 54 | wall 458
+2021-11-20 16:37:20 | INFO | fairseq.trainer | begin training epoch 8
+2021-11-20 16:37:36 | INFO | train_inner | epoch 008:     36 / 138 loss=7.782, nll_loss=6.879, distil_rate=0, ppl=117.72, wps=54778, ups=1.92, wpb=28508.5, bsz=1142.2, num_updates=1000, lr=0.00011675, gnorm=1.132, loss_scale=32, train_wall=39, wall=474
+2021-11-20 16:38:15 | INFO | train_inner | epoch 008:    136 / 138 loss=7.536, nll_loss=6.595, distil_rate=0, ppl=96.66, wps=72687.8, ups=2.53, wpb=28703.1, bsz=1164.2, num_updates=1100, lr=0.000128415, gnorm=1.074, loss_scale=32, train_wall=39, wall=513
+2021-11-20 16:38:16 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:38:19 | INFO | valid | epoch 008 | valid on 'valid' subset | loss 7.215 | nll_loss 6.157 | distil_rate 0 | ppl 71.37 | wps 178187 | wpb 11163.9 | bsz 455.2 | num_updates 1102 | best_loss 7.215
+2021-11-20 16:38:19 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:38:26 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint8.pt (epoch 8 @ 1102 updates, score 7.215) (writing took 6.962152760999743 seconds)
+2021-11-20 16:38:26 | INFO | fairseq_cli.train | end of epoch 8 (average epoch stats below)
+2021-11-20 16:38:26 | INFO | train | epoch 008 | loss 7.579 | nll_loss 6.644 | distil_rate 0 | ppl 100.03 | wps 59699.7 | ups 2.09 | wpb 28538 | bsz 1155.2 | num_updates 1102 | lr 0.000128648 | gnorm 1.128 | loss_scale 32 | train_wall 54 | wall 524
+2021-11-20 16:38:26 | INFO | fairseq.trainer | begin training epoch 9
+2021-11-20 16:39:07 | INFO | train_inner | epoch 009:     98 / 138 loss=7.344, nll_loss=6.372, distil_rate=0, ppl=82.83, wps=55207.7, ups=1.94, wpb=28434.5, bsz=1152.8, num_updates=1200, lr=0.00014008, gnorm=1.137, loss_scale=32, train_wall=40, wall=565
+2021-11-20 16:39:22 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:39:25 | INFO | valid | epoch 009 | valid on 'valid' subset | loss 6.898 | nll_loss 5.801 | distil_rate 0 | ppl 55.75 | wps 183518 | wpb 11163.9 | bsz 455.2 | num_updates 1240 | best_loss 6.898
+2021-11-20 16:39:25 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:39:33 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint9.pt (epoch 9 @ 1240 updates, score 6.898) (writing took 7.4484556630050065 seconds)
+2021-11-20 16:39:33 | INFO | fairseq_cli.train | end of epoch 9 (average epoch stats below)
+2021-11-20 16:39:33 | INFO | train | epoch 009 | loss 7.291 | nll_loss 6.311 | distil_rate 0 | ppl 79.39 | wps 58885.4 | ups 2.06 | wpb 28539.4 | bsz 1156.7 | num_updates 1240 | lr 0.000144746 | gnorm 1.133 | loss_scale 32 | train_wall 54 | wall 591
+2021-11-20 16:39:33 | INFO | fairseq.trainer | begin training epoch 10
+2021-11-20 16:39:58 | INFO | train_inner | epoch 010:     60 / 138 loss=7.105, nll_loss=6.097, distil_rate=0, ppl=68.44, wps=55669.1, ups=1.96, wpb=28474.8, bsz=1151.1, num_updates=1300, lr=0.000151745, gnorm=1.092, loss_scale=32, train_wall=39, wall=616
+2021-11-20 16:40:29 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:40:31 | INFO | valid | epoch 010 | valid on 'valid' subset | loss 6.599 | nll_loss 5.434 | distil_rate 0 | ppl 43.23 | wps 168892 | wpb 11163.9 | bsz 455.2 | num_updates 1378 | best_loss 6.599
+2021-11-20 16:40:31 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:40:39 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint10.pt (epoch 10 @ 1378 updates, score 6.599) (writing took 7.756715426992741 seconds)
+2021-11-20 16:40:39 | INFO | fairseq_cli.train | end of epoch 10 (average epoch stats below)
+2021-11-20 16:40:39 | INFO | train | epoch 010 | loss 6.99 | nll_loss 5.963 | distil_rate 0 | ppl 62.39 | wps 59161 | ups 2.07 | wpb 28534.8 | bsz 1156.5 | num_updates 1378 | lr 0.000160844 | gnorm 1.114 | loss_scale 32 | train_wall 54 | wall 657
+2021-11-20 16:40:39 | INFO | fairseq.trainer | begin training epoch 11
+2021-11-20 16:40:50 | INFO | train_inner | epoch 011:     22 / 138 loss=6.898, nll_loss=5.857, distil_rate=0, ppl=57.94, wps=55038.7, ups=1.93, wpb=28585.6, bsz=1161.4, num_updates=1400, lr=0.00016341, gnorm=1.16, loss_scale=32, train_wall=39, wall=668
+2021-11-20 16:41:29 | INFO | train_inner | epoch 011:    122 / 138 loss=6.72, nll_loss=5.649, distil_rate=0, ppl=50.17, wps=72949.7, ups=2.54, wpb=28667.9, bsz=1149.2, num_updates=1500, lr=0.000175075, gnorm=1.189, loss_scale=32, train_wall=39, wall=707
+2021-11-20 16:41:35 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:41:38 | INFO | valid | epoch 011 | valid on 'valid' subset | loss 6.336 | nll_loss 5.118 | distil_rate 0 | ppl 34.73 | wps 185334 | wpb 11163.9 | bsz 455.2 | num_updates 1516 | best_loss 6.336
+2021-11-20 16:41:38 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:41:46 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint11.pt (epoch 11 @ 1516 updates, score 6.336) (writing took 7.192582254996523 seconds)
+2021-11-20 16:41:46 | INFO | fairseq_cli.train | end of epoch 11 (average epoch stats below)
+2021-11-20 16:41:46 | INFO | train | epoch 011 | loss 6.712 | nll_loss 5.64 | distil_rate 0 | ppl 49.87 | wps 59356.1 | ups 2.08 | wpb 28542.8 | bsz 1159.3 | num_updates 1516 | lr 0.000176941 | gnorm 1.189 | loss_scale 32 | train_wall 54 | wall 724
+2021-11-20 16:41:46 | INFO | fairseq.trainer | begin training epoch 12
+2021-11-20 16:42:21 | INFO | train_inner | epoch 012:     84 / 138 loss=6.515, nll_loss=5.411, distil_rate=0, ppl=42.54, wps=54856.3, ups=1.94, wpb=28245.4, bsz=1139.8, num_updates=1600, lr=0.00018674, gnorm=1.156, loss_scale=32, train_wall=39, wall=759
+2021-11-20 16:42:42 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:42:45 | INFO | valid | epoch 012 | valid on 'valid' subset | loss 6.072 | nll_loss 4.791 | distil_rate 0 | ppl 27.69 | wps 176644 | wpb 11163.9 | bsz 455.2 | num_updates 1654 | best_loss 6.072
+2021-11-20 16:42:45 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:42:52 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint12.pt (epoch 12 @ 1654 updates, score 6.072) (writing took 7.0291532760020345 seconds)
+2021-11-20 16:42:52 | INFO | fairseq_cli.train | end of epoch 12 (average epoch stats below)
+2021-11-20 16:42:52 | INFO | train | epoch 012 | loss 6.429 | nll_loss 5.312 | distil_rate 0 | ppl 39.71 | wps 59397.9 | ups 2.08 | wpb 28531.9 | bsz 1156.1 | num_updates 1654 | lr 0.000193039 | gnorm 1.115 | loss_scale 32 | train_wall 54 | wall 790
+2021-11-20 16:42:52 | INFO | fairseq.trainer | begin training epoch 13
+2021-11-20 16:43:12 | INFO | train_inner | epoch 013:     46 / 138 loss=6.267, nll_loss=5.123, distil_rate=0, ppl=34.84, wps=55955.2, ups=1.96, wpb=28571.5, bsz=1189.8, num_updates=1700, lr=0.000198405, gnorm=1.098, loss_scale=32, train_wall=39, wall=810
+2021-11-20 16:43:48 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:43:50 | INFO | valid | epoch 013 | valid on 'valid' subset | loss 5.814 | nll_loss 4.481 | distil_rate 0 | ppl 22.33 | wps 174095 | wpb 11163.9 | bsz 455.2 | num_updates 1792 | best_loss 5.814
+2021-11-20 16:43:50 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:43:57 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint13.pt (epoch 13 @ 1792 updates, score 5.814) (writing took 7.02760095699341 seconds)
+2021-11-20 16:43:59 | INFO | fairseq_cli.train | end of epoch 13 (average epoch stats below)
+2021-11-20 16:43:59 | INFO | train | epoch 013 | loss 6.175 | nll_loss 5.014 | distil_rate 0 | ppl 32.31 | wps 58858 | ups 2.06 | wpb 28535.6 | bsz 1159.4 | num_updates 1792 | lr 0.000209137 | gnorm 1.146 | loss_scale 32 | train_wall 54 | wall 857
+2021-11-20 16:43:59 | INFO | fairseq.trainer | begin training epoch 14
+2021-11-20 16:44:04 | INFO | train_inner | epoch 014:      8 / 138 loss=6.142, nll_loss=4.975, distil_rate=0, ppl=31.45, wps=54872.4, ups=1.92, wpb=28529.9, bsz=1151, num_updates=1800, lr=0.00021007, gnorm=1.148, loss_scale=32, train_wall=39, wall=862
+2021-11-20 16:44:43 | INFO | train_inner | epoch 014:    108 / 138 loss=5.93, nll_loss=4.727, distil_rate=0, ppl=26.49, wps=73184.2, ups=2.54, wpb=28820.2, bsz=1157.4, num_updates=1900, lr=0.000221735, gnorm=1.034, loss_scale=32, train_wall=39, wall=901
+2021-11-20 16:44:55 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:44:58 | INFO | valid | epoch 014 | valid on 'valid' subset | loss 5.678 | nll_loss 4.312 | distil_rate 0 | ppl 19.87 | wps 173763 | wpb 11163.9 | bsz 455.2 | num_updates 1930 | best_loss 5.678
+2021-11-20 16:44:58 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:45:05 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint14.pt (epoch 14 @ 1930 updates, score 5.678) (writing took 7.259741740010213 seconds)
+2021-11-20 16:45:05 | INFO | fairseq_cli.train | end of epoch 14 (average epoch stats below)
+2021-11-20 16:45:05 | INFO | train | epoch 014 | loss 5.907 | nll_loss 4.701 | distil_rate 0 | ppl 26.01 | wps 59625.8 | ups 2.09 | wpb 28547.2 | bsz 1157.8 | num_updates 1930 | lr 0.000225234 | gnorm 1.015 | loss_scale 32 | train_wall 54 | wall 923
+2021-11-20 16:45:05 | INFO | fairseq.trainer | begin training epoch 15
+2021-11-20 16:45:34 | INFO | train_inner | epoch 015:     70 / 138 loss=5.756, nll_loss=4.524, distil_rate=0, ppl=23.01, wps=55847.9, ups=1.96, wpb=28439.5, bsz=1149.9, num_updates=2000, lr=0.0002334, gnorm=0.994, loss_scale=32, train_wall=39, wall=952
+2021-11-20 16:46:01 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:46:04 | INFO | valid | epoch 015 | valid on 'valid' subset | loss 5.406 | nll_loss 3.982 | distil_rate 0 | ppl 15.8 | wps 159042 | wpb 11163.9 | bsz 455.2 | num_updates 2068 | best_loss 5.406
+2021-11-20 16:46:04 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:46:11 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint15.pt (epoch 15 @ 2068 updates, score 5.406) (writing took 7.702235118995304 seconds)
+2021-11-20 16:46:11 | INFO | fairseq_cli.train | end of epoch 15 (average epoch stats below)
+2021-11-20 16:46:11 | INFO | train | epoch 015 | loss 5.682 | nll_loss 4.437 | distil_rate 0 | ppl 21.66 | wps 59200.8 | ups 2.07 | wpb 28537 | bsz 1157 | num_updates 2068 | lr 0.000241332 | gnorm 0.974 | loss_scale 37 | train_wall 54 | wall 989
+2021-11-20 16:46:11 | INFO | fairseq.trainer | begin training epoch 16
+2021-11-20 16:46:26 | INFO | train_inner | epoch 016:     32 / 138 loss=5.594, nll_loss=4.335, distil_rate=0, ppl=20.18, wps=54696.4, ups=1.93, wpb=28360.7, bsz=1161.7, num_updates=2100, lr=0.000245065, gnorm=0.937, loss_scale=49, train_wall=39, wall=1004
+2021-11-20 16:47:05 | INFO | train_inner | epoch 016:    132 / 138 loss=5.45, nll_loss=4.166, distil_rate=0, ppl=17.95, wps=72663.2, ups=2.53, wpb=28768.7, bsz=1170.1, num_updates=2200, lr=0.00025673, gnorm=0.847, loss_scale=64, train_wall=39, wall=1043
+2021-11-20 16:47:08 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:47:11 | INFO | valid | epoch 016 | valid on 'valid' subset | loss 5.221 | nll_loss 3.77 | distil_rate 0 | ppl 13.64 | wps 176416 | wpb 11163.9 | bsz 455.2 | num_updates 2206 | best_loss 5.221
+2021-11-20 16:47:11 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:47:17 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint16.pt (epoch 16 @ 2206 updates, score 5.221) (writing took 6.8814611220004736 seconds)
+2021-11-20 16:47:17 | INFO | fairseq_cli.train | end of epoch 16 (average epoch stats below)
+2021-11-20 16:47:17 | INFO | train | epoch 016 | loss 5.465 | nll_loss 4.184 | distil_rate 0 | ppl 18.18 | wps 59597.2 | ups 2.09 | wpb 28548.5 | bsz 1159.6 | num_updates 2206 | lr 0.00025743 | gnorm 0.876 | loss_scale 64 | train_wall 54 | wall 1055
+2021-11-20 16:47:17 | INFO | fairseq.trainer | begin training epoch 17
+2021-11-20 16:47:56 | INFO | train_inner | epoch 017:     94 / 138 loss=5.31, nll_loss=4.003, distil_rate=0, ppl=16.04, wps=56391.8, ups=1.98, wpb=28483, bsz=1146.7, num_updates=2300, lr=0.000268395, gnorm=0.841, loss_scale=64, train_wall=39, wall=1094
+2021-11-20 16:48:13 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:48:16 | INFO | valid | epoch 017 | valid on 'valid' subset | loss 5.232 | nll_loss 3.768 | distil_rate 0 | ppl 13.62 | wps 174091 | wpb 11163.9 | bsz 455.2 | num_updates 2344 | best_loss 5.221
+2021-11-20 16:48:16 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:48:19 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint17.pt (epoch 17 @ 2344 updates, score 5.232) (writing took 3.518372022008407 seconds)
+2021-11-20 16:48:19 | INFO | fairseq_cli.train | end of epoch 17 (average epoch stats below)
+2021-11-20 16:48:20 | INFO | train | epoch 017 | loss 5.282 | nll_loss 3.971 | distil_rate 0 | ppl 15.68 | wps 63434.8 | ups 2.22 | wpb 28535.5 | bsz 1155.8 | num_updates 2344 | lr 0.000273528 | gnorm 0.827 | loss_scale 64 | train_wall 54 | wall 1117
+2021-11-20 16:48:20 | INFO | fairseq.trainer | begin training epoch 18
+2021-11-20 16:48:22 | INFO | fairseq.trainer | NOTE: overflow detected, setting loss scale to: 32.0
+2021-11-20 16:48:44 | INFO | train_inner | epoch 018:     57 / 138 loss=5.19, nll_loss=3.864, distil_rate=0, ppl=14.56, wps=59506.2, ups=2.09, wpb=28449.7, bsz=1164.8, num_updates=2400, lr=0.00028006, gnorm=0.801, loss_scale=46, train_wall=39, wall=1142
+2021-11-20 16:49:15 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:49:18 | INFO | valid | epoch 018 | valid on 'valid' subset | loss 4.917 | nll_loss 3.411 | distil_rate 0 | ppl 10.63 | wps 142757 | wpb 11163.9 | bsz 455.2 | num_updates 2481 | best_loss 4.917
+2021-11-20 16:49:18 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:49:26 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint18.pt (epoch 18 @ 2481 updates, score 4.917) (writing took 7.431741514010355 seconds)
+2021-11-20 16:49:26 | INFO | fairseq_cli.train | end of epoch 18 (average epoch stats below)
+2021-11-20 16:49:26 | INFO | train | epoch 018 | loss 5.121 | nll_loss 3.784 | distil_rate 0 | ppl 13.77 | wps 58904.2 | ups 2.07 | wpb 28522.6 | bsz 1154.6 | num_updates 2481 | lr 0.000289509 | gnorm 0.746 | loss_scale 32 | train_wall 54 | wall 1184
+2021-11-20 16:49:26 | INFO | fairseq.trainer | begin training epoch 19
+2021-11-20 16:49:35 | INFO | train_inner | epoch 019:     19 / 138 loss=5.078, nll_loss=3.734, distil_rate=0, ppl=13.31, wps=55151.5, ups=1.94, wpb=28456.4, bsz=1152.8, num_updates=2500, lr=0.000291725, gnorm=0.75, loss_scale=32, train_wall=39, wall=1193
+2021-11-20 16:50:14 | INFO | train_inner | epoch 019:    119 / 138 loss=4.982, nll_loss=3.624, distil_rate=0, ppl=12.33, wps=73290.4, ups=2.56, wpb=28665.4, bsz=1149.5, num_updates=2600, lr=0.00030339, gnorm=0.703, loss_scale=32, train_wall=39, wall=1232
+2021-11-20 16:50:22 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:50:25 | INFO | valid | epoch 019 | valid on 'valid' subset | loss 4.843 | nll_loss 3.315 | distil_rate 0 | ppl 9.95 | wps 161960 | wpb 11163.9 | bsz 455.2 | num_updates 2619 | best_loss 4.843
+2021-11-20 16:50:25 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:50:32 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint19.pt (epoch 19 @ 2619 updates, score 4.843) (writing took 7.176090542998281 seconds)
+2021-11-20 16:50:32 | INFO | fairseq_cli.train | end of epoch 19 (average epoch stats below)
+2021-11-20 16:50:32 | INFO | train | epoch 019 | loss 4.975 | nll_loss 3.615 | distil_rate 0 | ppl 12.25 | wps 59532.4 | ups 2.09 | wpb 28535.9 | bsz 1156.6 | num_updates 2619 | lr 0.000305606 | gnorm 0.735 | loss_scale 32 | train_wall 54 | wall 1250
+2021-11-20 16:50:32 | INFO | fairseq.trainer | begin training epoch 20
+2021-11-20 16:51:06 | INFO | train_inner | epoch 020:     81 / 138 loss=4.864, nll_loss=3.488, distil_rate=0, ppl=11.22, wps=55759.1, ups=1.95, wpb=28593.9, bsz=1157.8, num_updates=2700, lr=0.000315055, gnorm=0.693, loss_scale=32, train_wall=39, wall=1284
+2021-11-20 16:51:28 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:51:31 | INFO | valid | epoch 020 | valid on 'valid' subset | loss 4.835 | nll_loss 3.323 | distil_rate 0 | ppl 10 | wps 177231 | wpb 11163.9 | bsz 455.2 | num_updates 2757 | best_loss 4.835
+2021-11-20 16:51:31 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:51:39 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint20.pt (epoch 20 @ 2757 updates, score 4.835) (writing took 7.5399631559994305 seconds)
+2021-11-20 16:51:39 | INFO | fairseq_cli.train | end of epoch 20 (average epoch stats below)
+2021-11-20 16:51:39 | INFO | train | epoch 020 | loss 4.834 | nll_loss 3.454 | distil_rate 0 | ppl 10.96 | wps 59029.8 | ups 2.07 | wpb 28533.7 | bsz 1158.8 | num_updates 2757 | lr 0.000321704 | gnorm 0.671 | loss_scale 32 | train_wall 54 | wall 1317
+2021-11-20 16:51:39 | INFO | fairseq.trainer | begin training epoch 21
+2021-11-20 16:51:58 | INFO | train_inner | epoch 021:     43 / 138 loss=4.778, nll_loss=3.391, distil_rate=0, ppl=10.49, wps=54623.3, ups=1.92, wpb=28379.5, bsz=1170, num_updates=2800, lr=0.00032672, gnorm=0.672, loss_scale=32, train_wall=40, wall=1336
+2021-11-20 16:52:35 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:52:38 | INFO | valid | epoch 021 | valid on 'valid' subset | loss 4.63 | nll_loss 3.075 | distil_rate 0 | ppl 8.42 | wps 152551 | wpb 11163.9 | bsz 455.2 | num_updates 2895 | best_loss 4.63
+2021-11-20 16:52:38 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:52:45 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint21.pt (epoch 21 @ 2895 updates, score 4.63) (writing took 7.677212208000128 seconds)
+2021-11-20 16:52:46 | INFO | fairseq_cli.train | end of epoch 21 (average epoch stats below)
+2021-11-20 16:52:46 | INFO | train | epoch 021 | loss 4.729 | nll_loss 3.333 | distil_rate 0 | ppl 10.08 | wps 58929.6 | ups 2.07 | wpb 28534.6 | bsz 1158.5 | num_updates 2895 | lr 0.000337802 | gnorm 0.653 | loss_scale 32 | train_wall 54 | wall 1384
+2021-11-20 16:52:46 | INFO | fairseq.trainer | begin training epoch 22
+2021-11-20 16:52:49 | INFO | train_inner | epoch 022:      5 / 138 loss=4.722, nll_loss=3.326, distil_rate=0, ppl=10.03, wps=55071.1, ups=1.93, wpb=28490.6, bsz=1140.9, num_updates=2900, lr=0.000338385, gnorm=0.643, loss_scale=32, train_wall=39, wall=1387
+2021-11-20 16:53:28 | INFO | train_inner | epoch 022:    105 / 138 loss=4.63, nll_loss=3.221, distil_rate=0, ppl=9.32, wps=73368.3, ups=2.56, wpb=28677.1, bsz=1162.9, num_updates=3000, lr=0.00035005, gnorm=0.628, loss_scale=32, train_wall=39, wall=1426
+2021-11-20 16:53:41 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:53:44 | INFO | valid | epoch 022 | valid on 'valid' subset | loss 4.57 | nll_loss 3.012 | distil_rate 0 | ppl 8.07 | wps 171809 | wpb 11163.9 | bsz 455.2 | num_updates 3033 | best_loss 4.57
+2021-11-20 16:53:44 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:53:52 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint22.pt (epoch 22 @ 3033 updates, score 4.57) (writing took 7.797282521991292 seconds)
+2021-11-20 16:53:52 | INFO | fairseq_cli.train | end of epoch 22 (average epoch stats below)
+2021-11-20 16:53:52 | INFO | train | epoch 022 | loss 4.624 | nll_loss 3.214 | distil_rate 0 | ppl 9.28 | wps 59130 | ups 2.07 | wpb 28535.6 | bsz 1156.7 | num_updates 3033 | lr 0.000353899 | gnorm 0.626 | loss_scale 32 | train_wall 54 | wall 1450
+2021-11-20 16:53:52 | INFO | fairseq.trainer | begin training epoch 23
+2021-11-20 16:54:20 | INFO | train_inner | epoch 023:     67 / 138 loss=4.542, nll_loss=3.12, distil_rate=0, ppl=8.69, wps=55036, ups=1.93, wpb=28560.3, bsz=1179.8, num_updates=3100, lr=0.000361715, gnorm=0.601, loss_scale=32, train_wall=39, wall=1478
+2021-11-20 16:54:48 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:54:51 | INFO | valid | epoch 023 | valid on 'valid' subset | loss 4.541 | nll_loss 2.985 | distil_rate 0 | ppl 7.92 | wps 176976 | wpb 11163.9 | bsz 455.2 | num_updates 3171 | best_loss 4.541
+2021-11-20 16:54:51 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:54:58 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint23.pt (epoch 23 @ 3171 updates, score 4.541) (writing took 7.370790268003475 seconds)
+2021-11-20 16:54:59 | INFO | fairseq_cli.train | end of epoch 23 (average epoch stats below)
+2021-11-20 16:54:59 | INFO | train | epoch 023 | loss 4.529 | nll_loss 3.105 | distil_rate 0 | ppl 8.6 | wps 59289.7 | ups 2.08 | wpb 28535.4 | bsz 1159.3 | num_updates 3171 | lr 0.000369997 | gnorm 0.592 | loss_scale 32 | train_wall 54 | wall 1517
+2021-11-20 16:54:59 | INFO | fairseq.trainer | begin training epoch 24
+2021-11-20 16:55:12 | INFO | train_inner | epoch 024:     29 / 138 loss=4.512, nll_loss=3.086, distil_rate=0, ppl=8.49, wps=54973.5, ups=1.93, wpb=28441, bsz=1139.4, num_updates=3200, lr=0.00037338, gnorm=0.594, loss_scale=32, train_wall=39, wall=1530
+2021-11-20 16:55:52 | INFO | train_inner | epoch 024:    129 / 138 loss=4.448, nll_loss=3.013, distil_rate=0, ppl=8.07, wps=72343.5, ups=2.52, wpb=28654.4, bsz=1171.6, num_updates=3300, lr=0.000385045, gnorm=0.557, loss_scale=32, train_wall=39, wall=1570
+2021-11-20 16:55:55 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:55:58 | INFO | valid | epoch 024 | valid on 'valid' subset | loss 4.466 | nll_loss 2.89 | distil_rate 0 | ppl 7.41 | wps 170593 | wpb 11163.9 | bsz 455.2 | num_updates 3309 | best_loss 4.466
+2021-11-20 16:55:58 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:56:07 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint24.pt (epoch 24 @ 3309 updates, score 4.466) (writing took 8.71733751699503 seconds)
+2021-11-20 16:56:07 | INFO | fairseq_cli.train | end of epoch 24 (average epoch stats below)
+2021-11-20 16:56:07 | INFO | train | epoch 024 | loss 4.451 | nll_loss 3.017 | distil_rate 0 | ppl 8.09 | wps 57628.3 | ups 2.02 | wpb 28539.2 | bsz 1159.1 | num_updates 3309 | lr 0.000386095 | gnorm 0.573 | loss_scale 32 | train_wall 54 | wall 1585
+2021-11-20 16:56:07 | INFO | fairseq.trainer | begin training epoch 25
+2021-11-20 16:56:45 | INFO | train_inner | epoch 025:     91 / 138 loss=4.38, nll_loss=2.936, distil_rate=0, ppl=7.65, wps=53534.3, ups=1.88, wpb=28439.9, bsz=1154.2, num_updates=3400, lr=0.00039671, gnorm=0.56, loss_scale=32, train_wall=39, wall=1623
+2021-11-20 16:57:03 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:57:06 | INFO | valid | epoch 025 | valid on 'valid' subset | loss 4.413 | nll_loss 2.841 | distil_rate 0 | ppl 7.16 | wps 186094 | wpb 11163.9 | bsz 455.2 | num_updates 3447 | best_loss 4.413
+2021-11-20 16:57:06 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:57:13 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint25.pt (epoch 25 @ 3447 updates, score 4.413) (writing took 7.524488194001606 seconds)
+2021-11-20 16:57:14 | INFO | fairseq_cli.train | end of epoch 25 (average epoch stats below)
+2021-11-20 16:57:14 | INFO | train | epoch 025 | loss 4.372 | nll_loss 2.927 | distil_rate 0 | ppl 7.61 | wps 59125.5 | ups 2.07 | wpb 28551.9 | bsz 1158.9 | num_updates 3447 | lr 0.000402193 | gnorm 0.546 | loss_scale 32 | train_wall 54 | wall 1652
+2021-11-20 16:57:14 | INFO | fairseq.trainer | begin training epoch 26
+2021-11-20 16:57:36 | INFO | train_inner | epoch 026:     53 / 138 loss=4.346, nll_loss=2.898, distil_rate=0, ppl=7.45, wps=55430.4, ups=1.95, wpb=28460.3, bsz=1136.1, num_updates=3500, lr=0.000408375, gnorm=0.567, loss_scale=32, train_wall=39, wall=1674
+2021-11-20 16:58:10 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:58:12 | INFO | valid | epoch 026 | valid on 'valid' subset | loss 4.383 | nll_loss 2.794 | distil_rate 0 | ppl 6.94 | wps 164404 | wpb 11163.9 | bsz 455.2 | num_updates 3585 | best_loss 4.383
+2021-11-20 16:58:12 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:58:20 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint26.pt (epoch 26 @ 3585 updates, score 4.383) (writing took 7.32545937699615 seconds)
+2021-11-20 16:58:20 | INFO | fairseq_cli.train | end of epoch 26 (average epoch stats below)
+2021-11-20 16:58:20 | INFO | train | epoch 026 | loss 4.313 | nll_loss 2.86 | distil_rate 0 | ppl 7.26 | wps 59330.9 | ups 2.08 | wpb 28530.5 | bsz 1157.7 | num_updates 3585 | lr 0.00041829 | gnorm 0.562 | loss_scale 32 | train_wall 54 | wall 1718
+2021-11-20 16:58:20 | INFO | fairseq.trainer | begin training epoch 27
+2021-11-20 16:58:28 | INFO | train_inner | epoch 027:     15 / 138 loss=4.308, nll_loss=2.855, distil_rate=0, ppl=7.23, wps=55547.2, ups=1.94, wpb=28583.7, bsz=1159.9, num_updates=3600, lr=0.00042004, gnorm=0.549, loss_scale=32, train_wall=39, wall=1726
+2021-11-20 16:59:07 | INFO | train_inner | epoch 027:    115 / 138 loss=4.231, nll_loss=2.767, distil_rate=0, ppl=6.8, wps=72748, ups=2.53, wpb=28733, bsz=1182.3, num_updates=3700, lr=0.000431705, gnorm=0.496, loss_scale=32, train_wall=39, wall=1765
+2021-11-20 16:59:16 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 16:59:19 | INFO | valid | epoch 027 | valid on 'valid' subset | loss 4.293 | nll_loss 2.71 | distil_rate 0 | ppl 6.54 | wps 165576 | wpb 11163.9 | bsz 455.2 | num_updates 3723 | best_loss 4.293
+2021-11-20 16:59:19 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 16:59:26 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint27.pt (epoch 27 @ 3723 updates, score 4.293) (writing took 7.188630327989813 seconds)
+2021-11-20 16:59:26 | INFO | fairseq_cli.train | end of epoch 27 (average epoch stats below)
+2021-11-20 16:59:26 | INFO | train | epoch 027 | loss 4.242 | nll_loss 2.78 | distil_rate 0 | ppl 6.87 | wps 59201.7 | ups 2.07 | wpb 28538.3 | bsz 1159.4 | num_updates 3723 | lr 0.000434388 | gnorm 0.515 | loss_scale 32 | train_wall 54 | wall 1784
+2021-11-20 16:59:26 | INFO | fairseq.trainer | begin training epoch 28
+2021-11-20 16:59:59 | INFO | train_inner | epoch 028:     77 / 138 loss=4.203, nll_loss=2.735, distil_rate=0, ppl=6.66, wps=55424.8, ups=1.94, wpb=28528.8, bsz=1144.5, num_updates=3800, lr=0.00044337, gnorm=0.518, loss_scale=32, train_wall=39, wall=1817
+2021-11-20 17:00:23 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:00:25 | INFO | valid | epoch 028 | valid on 'valid' subset | loss 4.287 | nll_loss 2.691 | distil_rate 0 | ppl 6.46 | wps 157297 | wpb 11163.9 | bsz 455.2 | num_updates 3861 | best_loss 4.287
+2021-11-20 17:00:25 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:00:32 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint28.pt (epoch 28 @ 3861 updates, score 4.287) (writing took 6.255654830005369 seconds)
+2021-11-20 17:00:32 | INFO | fairseq_cli.train | end of epoch 28 (average epoch stats below)
+2021-11-20 17:00:32 | INFO | train | epoch 028 | loss 4.187 | nll_loss 2.717 | distil_rate 0 | ppl 6.58 | wps 60239 | ups 2.11 | wpb 28540.7 | bsz 1153.8 | num_updates 3861 | lr 0.000450486 | gnorm 0.502 | loss_scale 32 | train_wall 54 | wall 1850
+2021-11-20 17:00:32 | INFO | fairseq.trainer | begin training epoch 29
+2021-11-20 17:00:49 | INFO | train_inner | epoch 029:     39 / 138 loss=4.166, nll_loss=2.693, distil_rate=0, ppl=6.47, wps=56254.4, ups=1.99, wpb=28309.1, bsz=1137, num_updates=3900, lr=0.000455035, gnorm=0.498, loss_scale=32, train_wall=39, wall=1867
+2021-11-20 17:01:28 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:01:31 | INFO | valid | epoch 029 | valid on 'valid' subset | loss 4.222 | nll_loss 2.621 | distil_rate 0 | ppl 6.15 | wps 159478 | wpb 11163.9 | bsz 455.2 | num_updates 3999 | best_loss 4.222
+2021-11-20 17:01:31 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:01:39 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint29.pt (epoch 29 @ 3999 updates, score 4.222) (writing took 8.046624891998363 seconds)
+2021-11-20 17:01:39 | INFO | fairseq_cli.train | end of epoch 29 (average epoch stats below)
+2021-11-20 17:01:39 | INFO | train | epoch 029 | loss 4.14 | nll_loss 2.664 | distil_rate 0 | ppl 6.34 | wps 58684 | ups 2.06 | wpb 28537.3 | bsz 1158.3 | num_updates 3999 | lr 0.000466583 | gnorm 0.506 | loss_scale 32 | train_wall 54 | wall 1917
+2021-11-20 17:01:39 | INFO | fairseq.trainer | begin training epoch 30
+2021-11-20 17:01:41 | INFO | train_inner | epoch 030:      1 / 138 loss=4.141, nll_loss=2.666, distil_rate=0, ppl=6.34, wps=54520.7, ups=1.91, wpb=28553.3, bsz=1171.8, num_updates=4000, lr=0.0004667, gnorm=0.505, loss_scale=32, train_wall=39, wall=1919
+2021-11-20 17:02:21 | INFO | train_inner | epoch 030:    101 / 138 loss=4.083, nll_loss=2.599, distil_rate=0, ppl=6.06, wps=72629.9, ups=2.54, wpb=28578.9, bsz=1161.6, num_updates=4100, lr=0.000478365, gnorm=0.489, loss_scale=32, train_wall=39, wall=1959
+2021-11-20 17:02:35 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:02:38 | INFO | valid | epoch 030 | valid on 'valid' subset | loss 4.238 | nll_loss 2.634 | distil_rate 0 | ppl 6.21 | wps 163180 | wpb 11163.9 | bsz 455.2 | num_updates 4137 | best_loss 4.222
+2021-11-20 17:02:38 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:02:41 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint30.pt (epoch 30 @ 4137 updates, score 4.238) (writing took 3.4201840559981065 seconds)
+2021-11-20 17:02:42 | INFO | fairseq_cli.train | end of epoch 30 (average epoch stats below)
+2021-11-20 17:02:42 | INFO | train | epoch 030 | loss 4.087 | nll_loss 2.604 | distil_rate 0 | ppl 6.08 | wps 62839.9 | ups 2.2 | wpb 28540 | bsz 1158.8 | num_updates 4137 | lr 0.000482681 | gnorm 0.497 | loss_scale 32 | train_wall 54 | wall 1980
+2021-11-20 17:02:42 | INFO | fairseq.trainer | begin training epoch 31
+2021-11-20 17:03:08 | INFO | train_inner | epoch 031:     63 / 138 loss=4.058, nll_loss=2.571, distil_rate=0, ppl=5.94, wps=59988.1, ups=2.1, wpb=28563.3, bsz=1144.9, num_updates=4200, lr=0.00049003, gnorm=0.498, loss_scale=32, train_wall=39, wall=2006
+2021-11-20 17:03:38 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:03:41 | INFO | valid | epoch 031 | valid on 'valid' subset | loss 4.231 | nll_loss 2.626 | distil_rate 0 | ppl 6.17 | wps 182938 | wpb 11163.9 | bsz 455.2 | num_updates 4275 | best_loss 4.222
+2021-11-20 17:03:41 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:03:45 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint31.pt (epoch 31 @ 4275 updates, score 4.231) (writing took 4.3597929469979135 seconds)
+2021-11-20 17:03:45 | INFO | fairseq_cli.train | end of epoch 31 (average epoch stats below)
+2021-11-20 17:03:45 | INFO | train | epoch 031 | loss 4.046 | nll_loss 2.557 | distil_rate 0 | ppl 5.89 | wps 62110.5 | ups 2.18 | wpb 28547.8 | bsz 1158.5 | num_updates 4275 | lr 0.000498779 | gnorm 0.499 | loss_scale 32 | train_wall 54 | wall 2043
+2021-11-20 17:03:45 | INFO | fairseq.trainer | begin training epoch 32
+2021-11-20 17:03:57 | INFO | train_inner | epoch 032:     25 / 138 loss=4.042, nll_loss=2.552, distil_rate=0, ppl=5.87, wps=58911.9, ups=2.06, wpb=28545.7, bsz=1174.1, num_updates=4300, lr=0.000501695, gnorm=0.508, loss_scale=32, train_wall=39, wall=2055
+2021-11-20 17:04:36 | INFO | train_inner | epoch 032:    125 / 138 loss=4.002, nll_loss=2.507, distil_rate=0, ppl=5.68, wps=72865.7, ups=2.54, wpb=28648.8, bsz=1157.9, num_updates=4400, lr=0.00051336, gnorm=0.465, loss_scale=35, train_wall=39, wall=2094
+2021-11-20 17:04:41 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:04:44 | INFO | valid | epoch 032 | valid on 'valid' subset | loss 4.151 | nll_loss 2.552 | distil_rate 0 | ppl 5.87 | wps 177702 | wpb 11163.9 | bsz 455.2 | num_updates 4413 | best_loss 4.151
+2021-11-20 17:04:44 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:04:52 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint32.pt (epoch 32 @ 4413 updates, score 4.151) (writing took 7.876702815992758 seconds)
+2021-11-20 17:04:52 | INFO | fairseq_cli.train | end of epoch 32 (average epoch stats below)
+2021-11-20 17:04:52 | INFO | train | epoch 032 | loss 4.003 | nll_loss 2.509 | distil_rate 0 | ppl 5.69 | wps 58808 | ups 2.06 | wpb 28536.3 | bsz 1158.6 | num_updates 4413 | lr 0.000514876 | gnorm 0.477 | loss_scale 37 | train_wall 54 | wall 2110
+2021-11-20 17:04:52 | INFO | fairseq.trainer | begin training epoch 33
+2021-11-20 17:05:28 | INFO | train_inner | epoch 033:     87 / 138 loss=3.967, nll_loss=2.467, distil_rate=0, ppl=5.53, wps=54674.2, ups=1.92, wpb=28540.2, bsz=1165.2, num_updates=4500, lr=0.000525025, gnorm=0.486, loss_scale=64, train_wall=39, wall=2146
+2021-11-20 17:05:48 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:05:51 | INFO | valid | epoch 033 | valid on 'valid' subset | loss 4.171 | nll_loss 2.562 | distil_rate 0 | ppl 5.91 | wps 175024 | wpb 11163.9 | bsz 455.2 | num_updates 4551 | best_loss 4.151
+2021-11-20 17:05:51 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:05:55 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint33.pt (epoch 33 @ 4551 updates, score 4.171) (writing took 3.6959082129906164 seconds)
+2021-11-20 17:05:55 | INFO | fairseq_cli.train | end of epoch 33 (average epoch stats below)
+2021-11-20 17:05:55 | INFO | train | epoch 033 | loss 3.965 | nll_loss 2.465 | distil_rate 0 | ppl 5.52 | wps 62691.1 | ups 2.2 | wpb 28533.8 | bsz 1158.3 | num_updates 4551 | lr 0.000530974 | gnorm 0.478 | loss_scale 64 | train_wall 54 | wall 2173
+2021-11-20 17:05:55 | INFO | fairseq.trainer | begin training epoch 34
+2021-11-20 17:06:16 | INFO | train_inner | epoch 034:     49 / 138 loss=3.947, nll_loss=2.445, distil_rate=0, ppl=5.44, wps=59238, ups=2.09, wpb=28284.8, bsz=1159.3, num_updates=4600, lr=0.00053669, gnorm=0.486, loss_scale=64, train_wall=39, wall=2194
+2021-11-20 17:06:51 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:06:54 | INFO | valid | epoch 034 | valid on 'valid' subset | loss 4.16 | nll_loss 2.538 | distil_rate 0 | ppl 5.81 | wps 185170 | wpb 11163.9 | bsz 455.2 | num_updates 4689 | best_loss 4.151
+2021-11-20 17:06:54 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:06:58 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint34.pt (epoch 34 @ 4689 updates, score 4.16) (writing took 3.876798721990781 seconds)
+2021-11-20 17:06:58 | INFO | fairseq_cli.train | end of epoch 34 (average epoch stats below)
+2021-11-20 17:06:58 | INFO | train | epoch 034 | loss 3.935 | nll_loss 2.431 | distil_rate 0 | ppl 5.39 | wps 62193 | ups 2.18 | wpb 28542.2 | bsz 1159.5 | num_updates 4689 | lr 0.000547072 | gnorm 0.493 | loss_scale 64 | train_wall 54 | wall 2236
+2021-11-20 17:06:58 | INFO | fairseq.trainer | begin training epoch 35
+2021-11-20 17:07:04 | INFO | train_inner | epoch 035:     11 / 138 loss=3.937, nll_loss=2.433, distil_rate=0, ppl=5.4, wps=59361.7, ups=2.07, wpb=28642.5, bsz=1144.6, num_updates=4700, lr=0.000548355, gnorm=0.491, loss_scale=64, train_wall=39, wall=2242
+2021-11-20 17:07:44 | INFO | train_inner | epoch 035:    111 / 138 loss=3.884, nll_loss=2.373, distil_rate=0, ppl=5.18, wps=73164.9, ups=2.54, wpb=28769.2, bsz=1200.6, num_updates=4800, lr=0.00056002, gnorm=0.478, loss_scale=64, train_wall=39, wall=2282
+2021-11-20 17:07:54 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:07:57 | INFO | valid | epoch 035 | valid on 'valid' subset | loss 4.133 | nll_loss 2.518 | distil_rate 0 | ppl 5.73 | wps 171793 | wpb 11163.9 | bsz 455.2 | num_updates 4827 | best_loss 4.133
+2021-11-20 17:07:57 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:08:04 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint35.pt (epoch 35 @ 4827 updates, score 4.133) (writing took 7.369462001995998 seconds)
+2021-11-20 17:08:04 | INFO | fairseq_cli.train | end of epoch 35 (average epoch stats below)
+2021-11-20 17:08:04 | INFO | train | epoch 035 | loss 3.898 | nll_loss 2.389 | distil_rate 0 | ppl 5.24 | wps 59412.2 | ups 2.08 | wpb 28537.9 | bsz 1159.2 | num_updates 4827 | lr 0.00056317 | gnorm 0.489 | loss_scale 64 | train_wall 54 | wall 2302
+2021-11-20 17:08:04 | INFO | fairseq.trainer | begin training epoch 36
+2021-11-20 17:08:35 | INFO | train_inner | epoch 036:     73 / 138 loss=3.883, nll_loss=2.371, distil_rate=0, ppl=5.17, wps=55108.4, ups=1.94, wpb=28410.7, bsz=1120.3, num_updates=4900, lr=0.000571685, gnorm=0.488, loss_scale=64, train_wall=39, wall=2333
+2021-11-20 17:09:01 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:09:04 | INFO | valid | epoch 036 | valid on 'valid' subset | loss 4.166 | nll_loss 2.553 | distil_rate 0 | ppl 5.87 | wps 182736 | wpb 11163.9 | bsz 455.2 | num_updates 4965 | best_loss 4.133
+2021-11-20 17:09:04 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:09:07 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint36.pt (epoch 36 @ 4965 updates, score 4.166) (writing took 3.687384013988776 seconds)
+2021-11-20 17:09:07 | INFO | fairseq_cli.train | end of epoch 36 (average epoch stats below)
+2021-11-20 17:09:07 | INFO | train | epoch 036 | loss 3.871 | nll_loss 2.358 | distil_rate 0 | ppl 5.13 | wps 62564.4 | ups 2.19 | wpb 28538.9 | bsz 1159.4 | num_updates 4965 | lr 0.000579267 | gnorm 0.49 | loss_scale 64 | train_wall 54 | wall 2365
+2021-11-20 17:09:07 | INFO | fairseq.trainer | begin training epoch 37
+2021-11-20 17:09:23 | INFO | train_inner | epoch 037:     35 / 138 loss=3.871, nll_loss=2.358, distil_rate=0, ppl=5.13, wps=59691.2, ups=2.09, wpb=28515.1, bsz=1167.1, num_updates=5000, lr=0.00058335, gnorm=0.514, loss_scale=64, train_wall=39, wall=2381
+2021-11-20 17:10:02 | INFO | train_inner | epoch 037:    135 / 138 loss=3.847, nll_loss=2.33, distil_rate=0, ppl=5.03, wps=73178, ups=2.55, wpb=28672.9, bsz=1161.8, num_updates=5100, lr=0.000595015, gnorm=0.464, loss_scale=64, train_wall=39, wall=2420
+2021-11-20 17:10:03 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:10:06 | INFO | valid | epoch 037 | valid on 'valid' subset | loss 4.102 | nll_loss 2.486 | distil_rate 0 | ppl 5.6 | wps 167300 | wpb 11163.9 | bsz 455.2 | num_updates 5103 | best_loss 4.102
+2021-11-20 17:10:06 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:10:14 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint37.pt (epoch 37 @ 5103 updates, score 4.102) (writing took 7.881974663992878 seconds)
+2021-11-20 17:10:14 | INFO | fairseq_cli.train | end of epoch 37 (average epoch stats below)
+2021-11-20 17:10:14 | INFO | train | epoch 037 | loss 3.846 | nll_loss 2.329 | distil_rate 0 | ppl 5.03 | wps 59043.2 | ups 2.07 | wpb 28544.6 | bsz 1159 | num_updates 5103 | lr 0.000595365 | gnorm 0.487 | loss_scale 64 | train_wall 54 | wall 2432
+2021-11-20 17:10:14 | INFO | fairseq.trainer | begin training epoch 38
+2021-11-20 17:10:54 | INFO | train_inner | epoch 038:     97 / 138 loss=3.821, nll_loss=2.3, distil_rate=0, ppl=4.92, wps=54421.4, ups=1.92, wpb=28401.8, bsz=1123, num_updates=5200, lr=0.00060668, gnorm=0.496, loss_scale=64, train_wall=39, wall=2472
+2021-11-20 17:11:10 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:11:13 | INFO | valid | epoch 038 | valid on 'valid' subset | loss 4.085 | nll_loss 2.468 | distil_rate 0 | ppl 5.53 | wps 161301 | wpb 11163.9 | bsz 455.2 | num_updates 5241 | best_loss 4.085
+2021-11-20 17:11:13 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:11:21 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint38.pt (epoch 38 @ 5241 updates, score 4.085) (writing took 7.8517319110105745 seconds)
+2021-11-20 17:11:21 | INFO | fairseq_cli.train | end of epoch 38 (average epoch stats below)
+2021-11-20 17:11:21 | INFO | train | epoch 038 | loss 3.818 | nll_loss 2.297 | distil_rate 0 | ppl 4.91 | wps 58665.7 | ups 2.06 | wpb 28530.7 | bsz 1157.8 | num_updates 5241 | lr 0.000611463 | gnorm 0.484 | loss_scale 64 | train_wall 54 | wall 2499
+2021-11-20 17:11:21 | INFO | fairseq.trainer | begin training epoch 39
+2021-11-20 17:11:46 | INFO | train_inner | epoch 039:     59 / 138 loss=3.79, nll_loss=2.266, distil_rate=0, ppl=4.81, wps=54876.6, ups=1.92, wpb=28626.2, bsz=1199.9, num_updates=5300, lr=0.000618345, gnorm=0.488, loss_scale=64, train_wall=39, wall=2524
+2021-11-20 17:12:18 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:12:21 | INFO | valid | epoch 039 | valid on 'valid' subset | loss 4.112 | nll_loss 2.491 | distil_rate 0 | ppl 5.62 | wps 184479 | wpb 11163.9 | bsz 455.2 | num_updates 5379 | best_loss 4.085
+2021-11-20 17:12:21 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:12:24 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint39.pt (epoch 39 @ 5379 updates, score 4.112) (writing took 3.4084521629993105 seconds)
+2021-11-20 17:12:24 | INFO | fairseq_cli.train | end of epoch 39 (average epoch stats below)
+2021-11-20 17:12:24 | INFO | train | epoch 039 | loss 3.795 | nll_loss 2.271 | distil_rate 0 | ppl 4.83 | wps 62660.6 | ups 2.2 | wpb 28538.3 | bsz 1156.5 | num_updates 5379 | lr 0.00062756 | gnorm 0.488 | loss_scale 64 | train_wall 54 | wall 2562
+2021-11-20 17:12:24 | INFO | fairseq.trainer | begin training epoch 40
+2021-11-20 17:12:34 | INFO | train_inner | epoch 040:     21 / 138 loss=3.792, nll_loss=2.267, distil_rate=0, ppl=4.81, wps=59408.3, ups=2.09, wpb=28448.8, bsz=1147.1, num_updates=5400, lr=0.00063001, gnorm=0.486, loss_scale=64, train_wall=39, wall=2572
+2021-11-20 17:13:13 | INFO | train_inner | epoch 040:    121 / 138 loss=3.78, nll_loss=2.255, distil_rate=0, ppl=4.77, wps=73394.9, ups=2.56, wpb=28693.2, bsz=1159.3, num_updates=5500, lr=0.000641675, gnorm=0.476, loss_scale=64, train_wall=39, wall=2611
+2021-11-20 17:13:20 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:13:23 | INFO | valid | epoch 040 | valid on 'valid' subset | loss 4.229 | nll_loss 2.629 | distil_rate 0 | ppl 6.19 | wps 174577 | wpb 11163.9 | bsz 455.2 | num_updates 5517 | best_loss 4.085
+2021-11-20 17:13:23 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:13:27 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint40.pt (epoch 40 @ 5517 updates, score 4.229) (writing took 4.060810536000645 seconds)
+2021-11-20 17:13:27 | INFO | fairseq_cli.train | end of epoch 40 (average epoch stats below)
+2021-11-20 17:13:27 | INFO | train | epoch 040 | loss 3.771 | nll_loss 2.243 | distil_rate 0 | ppl 4.73 | wps 62469.8 | ups 2.19 | wpb 28545.4 | bsz 1158.5 | num_updates 5517 | lr 0.000643658 | gnorm 0.494 | loss_scale 64 | train_wall 54 | wall 2625
+2021-11-20 17:13:27 | INFO | fairseq.trainer | begin training epoch 41
+2021-11-20 17:13:29 | INFO | fairseq.trainer | NOTE: overflow detected, setting loss scale to: 32.0
+2021-11-20 17:14:02 | INFO | train_inner | epoch 041:     84 / 138 loss=3.741, nll_loss=2.209, distil_rate=0, ppl=4.62, wps=58552.7, ups=2.06, wpb=28458.4, bsz=1177.7, num_updates=5600, lr=0.00065334, gnorm=0.515, loss_scale=37, train_wall=40, wall=2660
+2021-11-20 17:14:23 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:14:26 | INFO | valid | epoch 041 | valid on 'valid' subset | loss 4.074 | nll_loss 2.452 | distil_rate 0 | ppl 5.47 | wps 169261 | wpb 11163.9 | bsz 455.2 | num_updates 5654 | best_loss 4.074
+2021-11-20 17:14:26 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:14:34 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint41.pt (epoch 41 @ 5654 updates, score 4.074) (writing took 8.278130866994616 seconds)
+2021-11-20 17:14:35 | INFO | fairseq_cli.train | end of epoch 41 (average epoch stats below)
+2021-11-20 17:14:35 | INFO | train | epoch 041 | loss 3.755 | nll_loss 2.225 | distil_rate 0 | ppl 4.68 | wps 57979.4 | ups 2.03 | wpb 28555.7 | bsz 1161.7 | num_updates 5654 | lr 0.000659639 | gnorm 0.501 | loss_scale 32 | train_wall 54 | wall 2693
+2021-11-20 17:14:35 | INFO | fairseq.trainer | begin training epoch 42
+2021-11-20 17:14:55 | INFO | train_inner | epoch 042:     46 / 138 loss=3.754, nll_loss=2.224, distil_rate=0, ppl=4.67, wps=53995.9, ups=1.9, wpb=28425.1, bsz=1132.6, num_updates=5700, lr=0.000665005, gnorm=0.505, loss_scale=32, train_wall=39, wall=2713
+2021-11-20 17:15:31 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:15:34 | INFO | valid | epoch 042 | valid on 'valid' subset | loss 4.054 | nll_loss 2.434 | distil_rate 0 | ppl 5.4 | wps 176578 | wpb 11163.9 | bsz 455.2 | num_updates 5792 | best_loss 4.054
+2021-11-20 17:15:34 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:15:41 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint42.pt (epoch 42 @ 5792 updates, score 4.054) (writing took 7.767308160997345 seconds)
+2021-11-20 17:15:42 | INFO | fairseq_cli.train | end of epoch 42 (average epoch stats below)
+2021-11-20 17:15:42 | INFO | train | epoch 042 | loss 3.736 | nll_loss 2.204 | distil_rate 0 | ppl 4.61 | wps 58810.6 | ups 2.06 | wpb 28535.9 | bsz 1158.1 | num_updates 5792 | lr 0.000675737 | gnorm 0.501 | loss_scale 32 | train_wall 54 | wall 2760
+2021-11-20 17:15:42 | INFO | fairseq.trainer | begin training epoch 43
+2021-11-20 17:15:47 | INFO | train_inner | epoch 043:      8 / 138 loss=3.739, nll_loss=2.208, distil_rate=0, ppl=4.62, wps=54880.5, ups=1.93, wpb=28451.6, bsz=1163.4, num_updates=5800, lr=0.00067667, gnorm=0.499, loss_scale=32, train_wall=39, wall=2765
+2021-11-20 17:16:26 | INFO | train_inner | epoch 043:    108 / 138 loss=3.704, nll_loss=2.166, distil_rate=0, ppl=4.49, wps=72857, ups=2.53, wpb=28807.9, bsz=1169.7, num_updates=5900, lr=0.000688335, gnorm=0.476, loss_scale=32, train_wall=39, wall=2804
+2021-11-20 17:16:38 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:16:41 | INFO | valid | epoch 043 | valid on 'valid' subset | loss 4.031 | nll_loss 2.412 | distil_rate 0 | ppl 5.32 | wps 179498 | wpb 11163.9 | bsz 455.2 | num_updates 5930 | best_loss 4.031
+2021-11-20 17:16:41 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:16:48 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint43.pt (epoch 43 @ 5930 updates, score 4.031) (writing took 7.729694114997983 seconds)
+2021-11-20 17:16:49 | INFO | fairseq_cli.train | end of epoch 43 (average epoch stats below)
+2021-11-20 17:16:49 | INFO | train | epoch 043 | loss 3.713 | nll_loss 2.178 | distil_rate 0 | ppl 4.52 | wps 58776.1 | ups 2.06 | wpb 28538.1 | bsz 1158.9 | num_updates 5930 | lr 0.000691834 | gnorm 0.491 | loss_scale 32 | train_wall 54 | wall 2827
+2021-11-20 17:16:49 | INFO | fairseq.trainer | begin training epoch 44
+2021-11-20 17:17:18 | INFO | train_inner | epoch 044:     70 / 138 loss=3.699, nll_loss=2.162, distil_rate=0, ppl=4.47, wps=54612.3, ups=1.92, wpb=28394.3, bsz=1138.6, num_updates=6000, lr=0.0007, gnorm=0.495, loss_scale=32, train_wall=39, wall=2856
+2021-11-20 17:17:45 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:17:48 | INFO | valid | epoch 044 | valid on 'valid' subset | loss 4.052 | nll_loss 2.434 | distil_rate 0 | ppl 5.41 | wps 182251 | wpb 11163.9 | bsz 455.2 | num_updates 6068 | best_loss 4.031
+2021-11-20 17:17:48 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:17:52 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint44.pt (epoch 44 @ 6068 updates, score 4.052) (writing took 4.714104130995111 seconds)
+2021-11-20 17:17:53 | INFO | fairseq_cli.train | end of epoch 44 (average epoch stats below)
+2021-11-20 17:17:53 | INFO | train | epoch 044 | loss 3.693 | nll_loss 2.155 | distil_rate 0 | ppl 4.45 | wps 61504.4 | ups 2.16 | wpb 28539.1 | bsz 1157.8 | num_updates 6068 | lr 0.000696067 | gnorm 0.492 | loss_scale 32 | train_wall 54 | wall 2891
+2021-11-20 17:17:53 | INFO | fairseq.trainer | begin training epoch 45
+2021-11-20 17:18:07 | INFO | train_inner | epoch 045:     32 / 138 loss=3.696, nll_loss=2.158, distil_rate=0, ppl=4.46, wps=58055.6, ups=2.04, wpb=28507, bsz=1179.8, num_updates=6100, lr=0.000694239, gnorm=0.513, loss_scale=32, train_wall=39, wall=2905
+2021-11-20 17:18:47 | INFO | train_inner | epoch 045:    132 / 138 loss=3.675, nll_loss=2.134, distil_rate=0, ppl=4.39, wps=72717.1, ups=2.53, wpb=28688.6, bsz=1156.2, num_updates=6200, lr=0.000688617, gnorm=0.472, loss_scale=32, train_wall=39, wall=2945
+2021-11-20 17:18:49 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:18:52 | INFO | valid | epoch 045 | valid on 'valid' subset | loss 4.036 | nll_loss 2.419 | distil_rate 0 | ppl 5.35 | wps 159766 | wpb 11163.9 | bsz 455.2 | num_updates 6206 | best_loss 4.031
+2021-11-20 17:18:52 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:18:55 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint45.pt (epoch 45 @ 6206 updates, score 4.036) (writing took 3.5164022599929012 seconds)
+2021-11-20 17:18:55 | INFO | fairseq_cli.train | end of epoch 45 (average epoch stats below)
+2021-11-20 17:18:55 | INFO | train | epoch 045 | loss 3.673 | nll_loss 2.131 | distil_rate 0 | ppl 4.38 | wps 62625.4 | ups 2.19 | wpb 28541.8 | bsz 1158.1 | num_updates 6206 | lr 0.000688284 | gnorm 0.49 | loss_scale 32 | train_wall 54 | wall 2953
+2021-11-20 17:18:55 | INFO | fairseq.trainer | begin training epoch 46
+2021-11-20 17:19:34 | INFO | train_inner | epoch 046:     94 / 138 loss=3.632, nll_loss=2.085, distil_rate=0, ppl=4.24, wps=59921.9, ups=2.1, wpb=28544.1, bsz=1170.8, num_updates=6300, lr=0.00068313, gnorm=0.498, loss_scale=32, train_wall=39, wall=2992
+2021-11-20 17:19:51 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:19:54 | INFO | valid | epoch 046 | valid on 'valid' subset | loss 4.028 | nll_loss 2.405 | distil_rate 0 | ppl 5.3 | wps 185842 | wpb 11163.9 | bsz 455.2 | num_updates 6344 | best_loss 4.028
+2021-11-20 17:19:54 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:20:01 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint46.pt (epoch 46 @ 6344 updates, score 4.028) (writing took 6.847577410997474 seconds)
+2021-11-20 17:20:02 | INFO | fairseq_cli.train | end of epoch 46 (average epoch stats below)
+2021-11-20 17:20:02 | INFO | train | epoch 046 | loss 3.649 | nll_loss 2.105 | distil_rate 0 | ppl 4.3 | wps 59521.6 | ups 2.09 | wpb 28544.2 | bsz 1160.1 | num_updates 6344 | lr 0.000680757 | gnorm 0.5 | loss_scale 32 | train_wall 54 | wall 3020
+2021-11-20 17:20:02 | INFO | fairseq.trainer | begin training epoch 47
+2021-11-20 17:20:26 | INFO | train_inner | epoch 047:     56 / 138 loss=3.644, nll_loss=2.098, distil_rate=0, ppl=4.28, wps=55328.3, ups=1.95, wpb=28434.1, bsz=1147, num_updates=6400, lr=0.000677772, gnorm=0.512, loss_scale=32, train_wall=39, wall=3044
+2021-11-20 17:20:58 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:21:01 | INFO | valid | epoch 047 | valid on 'valid' subset | loss 4.003 | nll_loss 2.382 | distil_rate 0 | ppl 5.21 | wps 181725 | wpb 11163.9 | bsz 455.2 | num_updates 6482 | best_loss 4.003
+2021-11-20 17:21:01 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:21:08 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint47.pt (epoch 47 @ 6482 updates, score 4.003) (writing took 7.741901200002758 seconds)
+2021-11-20 17:21:09 | INFO | fairseq_cli.train | end of epoch 47 (average epoch stats below)
+2021-11-20 17:21:09 | INFO | train | epoch 047 | loss 3.627 | nll_loss 2.08 | distil_rate 0 | ppl 4.23 | wps 58831.5 | ups 2.06 | wpb 28529.9 | bsz 1157.6 | num_updates 6482 | lr 0.000673471 | gnorm 0.499 | loss_scale 32 | train_wall 54 | wall 3087
+2021-11-20 17:21:09 | INFO | fairseq.trainer | begin training epoch 48
+2021-11-20 17:21:18 | INFO | train_inner | epoch 048:     18 / 138 loss=3.633, nll_loss=2.086, distil_rate=0, ppl=4.24, wps=54980.7, ups=1.93, wpb=28524.1, bsz=1144.4, num_updates=6500, lr=0.000672538, gnorm=0.5, loss_scale=32, train_wall=39, wall=3096
+2021-11-20 17:21:57 | INFO | train_inner | epoch 048:    118 / 138 loss=3.595, nll_loss=2.042, distil_rate=0, ppl=4.12, wps=72816.9, ups=2.54, wpb=28680.7, bsz=1165.8, num_updates=6600, lr=0.000667424, gnorm=0.471, loss_scale=32, train_wall=39, wall=3135
+2021-11-20 17:22:05 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:22:08 | INFO | valid | epoch 048 | valid on 'valid' subset | loss 3.992 | nll_loss 2.377 | distil_rate 0 | ppl 5.2 | wps 186260 | wpb 11163.9 | bsz 455.2 | num_updates 6620 | best_loss 3.992
+2021-11-20 17:22:08 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:22:15 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint48.pt (epoch 48 @ 6620 updates, score 3.992) (writing took 7.522015536989784 seconds)
+2021-11-20 17:22:15 | INFO | fairseq_cli.train | end of epoch 48 (average epoch stats below)
+2021-11-20 17:22:15 | INFO | train | epoch 048 | loss 3.601 | nll_loss 2.05 | distil_rate 0 | ppl 4.14 | wps 58998.9 | ups 2.07 | wpb 28537.9 | bsz 1157.4 | num_updates 6620 | lr 0.000666415 | gnorm 0.49 | loss_scale 32 | train_wall 54 | wall 3153
+2021-11-20 17:22:15 | INFO | fairseq.trainer | begin training epoch 49
+2021-11-20 17:22:48 | INFO | train_inner | epoch 049:     80 / 138 loss=3.574, nll_loss=2.018, distil_rate=0, ppl=4.05, wps=55245.9, ups=1.94, wpb=28496.7, bsz=1169.4, num_updates=6700, lr=0.000662424, gnorm=0.496, loss_scale=32, train_wall=39, wall=3186
+2021-11-20 17:23:17 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:23:20 | INFO | valid | epoch 049 | valid on 'valid' subset | loss 4.034 | nll_loss 2.402 | distil_rate 0 | ppl 5.28 | wps 164747 | wpb 11163.9 | bsz 455.2 | num_updates 6758 | best_loss 3.992
+2021-11-20 17:23:20 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:23:23 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint49.pt (epoch 49 @ 6758 updates, score 4.034) (writing took 3.266795732997707 seconds)
+2021-11-20 17:23:24 | INFO | fairseq_cli.train | end of epoch 49 (average epoch stats below)
+2021-11-20 17:23:24 | INFO | train | epoch 049 | loss 3.58 | nll_loss 2.026 | distil_rate 0 | ppl 4.07 | wps 57759.4 | ups 2.02 | wpb 28551.8 | bsz 1157 | num_updates 6758 | lr 0.000659576 | gnorm 0.49 | loss_scale 32 | train_wall 60 | wall 3222
+2021-11-20 17:23:24 | INFO | fairseq.trainer | begin training epoch 50
+2021-11-20 17:23:42 | INFO | train_inner | epoch 050:     42 / 138 loss=3.586, nll_loss=2.032, distil_rate=0, ppl=4.09, wps=53170.3, ups=1.87, wpb=28372.2, bsz=1133.9, num_updates=6800, lr=0.000657536, gnorm=0.504, loss_scale=32, train_wall=45, wall=3240
+2021-11-20 17:24:19 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:24:22 | INFO | valid | epoch 050 | valid on 'valid' subset | loss 4.001 | nll_loss 2.374 | distil_rate 0 | ppl 5.18 | wps 185502 | wpb 11163.9 | bsz 455.2 | num_updates 6896 | best_loss 3.992
+2021-11-20 17:24:22 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:24:25 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint50.pt (epoch 50 @ 6896 updates, score 4.001) (writing took 3.311165246006567 seconds)
+2021-11-20 17:24:25 | INFO | fairseq_cli.train | end of epoch 50 (average epoch stats below)
+2021-11-20 17:24:25 | INFO | train | epoch 050 | loss 3.562 | nll_loss 2.005 | distil_rate 0 | ppl 4.01 | wps 63668.2 | ups 2.23 | wpb 28534.3 | bsz 1157.2 | num_updates 6896 | lr 0.000652943 | gnorm 0.504 | loss_scale 32 | train_wall 53 | wall 3283
+2021-11-20 17:24:25 | INFO | fairseq.trainer | begin training epoch 51
+2021-11-20 17:24:29 | INFO | train_inner | epoch 051:      4 / 138 loss=3.567, nll_loss=2.011, distil_rate=0, ppl=4.03, wps=60738.9, ups=2.13, wpb=28578.1, bsz=1158.9, num_updates=6900, lr=0.000652753, gnorm=0.503, loss_scale=32, train_wall=39, wall=3287
+2021-11-20 17:25:20 | INFO | train_inner | epoch 051:    104 / 138 loss=3.535, nll_loss=1.972, distil_rate=0, ppl=3.92, wps=56538.6, ups=1.97, wpb=28655.9, bsz=1130.7, num_updates=7000, lr=0.000648074, gnorm=0.479, loss_scale=32, train_wall=51, wall=3338
+2021-11-20 17:25:33 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:25:36 | INFO | valid | epoch 051 | valid on 'valid' subset | loss 3.999 | nll_loss 2.368 | distil_rate 0 | ppl 5.16 | wps 168642 | wpb 11163.9 | bsz 455.2 | num_updates 7034 | best_loss 3.992
+2021-11-20 17:25:36 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:25:39 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint51.pt (epoch 51 @ 7034 updates, score 3.999) (writing took 3.4750655139941955 seconds)
+2021-11-20 17:25:39 | INFO | fairseq_cli.train | end of epoch 51 (average epoch stats below)
+2021-11-20 17:25:39 | INFO | train | epoch 051 | loss 3.537 | nll_loss 1.975 | distil_rate 0 | ppl 3.93 | wps 53267.8 | ups 1.87 | wpb 28536.2 | bsz 1158 | num_updates 7034 | lr 0.000646506 | gnorm 0.484 | loss_scale 32 | train_wall 65 | wall 3357
+2021-11-20 17:25:39 | INFO | fairseq.trainer | begin training epoch 52
+2021-11-20 17:26:07 | INFO | train_inner | epoch 052:     66 / 138 loss=3.511, nll_loss=1.946, distil_rate=0, ppl=3.85, wps=59772.6, ups=2.1, wpb=28469.8, bsz=1194.3, num_updates=7100, lr=0.000643494, gnorm=0.509, loss_scale=32, train_wall=39, wall=3385
+2021-11-20 17:26:36 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:26:38 | INFO | valid | epoch 052 | valid on 'valid' subset | loss 3.981 | nll_loss 2.357 | distil_rate 0 | ppl 5.12 | wps 185844 | wpb 11163.9 | bsz 455.2 | num_updates 7172 | best_loss 3.981
+2021-11-20 17:26:38 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:26:46 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint52.pt (epoch 52 @ 7172 updates, score 3.981) (writing took 8.020233766001184 seconds)
+2021-11-20 17:26:46 | INFO | fairseq_cli.train | end of epoch 52 (average epoch stats below)
+2021-11-20 17:26:46 | INFO | train | epoch 052 | loss 3.521 | nll_loss 1.957 | distil_rate 0 | ppl 3.88 | wps 58733.3 | ups 2.06 | wpb 28540.6 | bsz 1157.1 | num_updates 7172 | lr 0.000640256 | gnorm 0.51 | loss_scale 32 | train_wall 54 | wall 3424
+2021-11-20 17:26:46 | INFO | fairseq.trainer | begin training epoch 53
+2021-11-20 17:26:59 | INFO | train_inner | epoch 053:     28 / 138 loss=3.525, nll_loss=1.962, distil_rate=0, ppl=3.9, wps=54801.2, ups=1.92, wpb=28554.2, bsz=1157.7, num_updates=7200, lr=0.00063901, gnorm=0.509, loss_scale=32, train_wall=39, wall=3437
+2021-11-20 17:27:39 | INFO | train_inner | epoch 053:    128 / 138 loss=3.504, nll_loss=1.937, distil_rate=0, ppl=3.83, wps=72957.4, ups=2.55, wpb=28646.5, bsz=1155.4, num_updates=7300, lr=0.000634618, gnorm=0.474, loss_scale=32, train_wall=39, wall=3477
+2021-11-20 17:27:43 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:27:45 | INFO | valid | epoch 053 | valid on 'valid' subset | loss 3.988 | nll_loss 2.364 | distil_rate 0 | ppl 5.15 | wps 185932 | wpb 11163.9 | bsz 455.2 | num_updates 7310 | best_loss 3.981
+2021-11-20 17:27:45 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:27:49 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint53.pt (epoch 53 @ 7310 updates, score 3.988) (writing took 3.434678299992811 seconds)
+2021-11-20 17:27:49 | INFO | fairseq_cli.train | end of epoch 53 (average epoch stats below)
+2021-11-20 17:27:49 | INFO | train | epoch 053 | loss 3.5 | nll_loss 1.933 | distil_rate 0 | ppl 3.82 | wps 62886.3 | ups 2.2 | wpb 28540.4 | bsz 1157 | num_updates 7310 | lr 0.000634184 | gnorm 0.49 | loss_scale 32 | train_wall 54 | wall 3487
+2021-11-20 17:27:49 | INFO | fairseq.trainer | begin training epoch 54
+2021-11-20 17:28:26 | INFO | train_inner | epoch 054:     90 / 138 loss=3.471, nll_loss=1.899, distil_rate=0, ppl=3.73, wps=59976.3, ups=2.1, wpb=28523.6, bsz=1155.1, num_updates=7400, lr=0.000630315, gnorm=0.499, loss_scale=32, train_wall=39, wall=3524
+2021-11-20 17:28:45 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:28:48 | INFO | valid | epoch 054 | valid on 'valid' subset | loss 3.973 | nll_loss 2.351 | distil_rate 0 | ppl 5.1 | wps 184102 | wpb 11163.9 | bsz 455.2 | num_updates 7448 | best_loss 3.973
+2021-11-20 17:28:48 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:28:55 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint54.pt (epoch 54 @ 7448 updates, score 3.973) (writing took 7.052162477004458 seconds)
+2021-11-20 17:28:55 | INFO | fairseq_cli.train | end of epoch 54 (average epoch stats below)
+2021-11-20 17:28:55 | INFO | train | epoch 054 | loss 3.485 | nll_loss 1.916 | distil_rate 0 | ppl 3.77 | wps 59967.6 | ups 2.1 | wpb 28542.8 | bsz 1158.3 | num_updates 7448 | lr 0.000628281 | gnorm 0.506 | loss_scale 32 | train_wall 54 | wall 3553
+2021-11-20 17:28:55 | INFO | fairseq.trainer | begin training epoch 55
+2021-11-20 17:29:17 | INFO | train_inner | epoch 055:     52 / 138 loss=3.476, nll_loss=1.905, distil_rate=0, ppl=3.74, wps=55750.2, ups=1.96, wpb=28460.1, bsz=1152.2, num_updates=7500, lr=0.000626099, gnorm=0.513, loss_scale=32, train_wall=39, wall=3575
+2021-11-20 17:29:51 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:29:54 | INFO | valid | epoch 055 | valid on 'valid' subset | loss 3.965 | nll_loss 2.341 | distil_rate 0 | ppl 5.07 | wps 177945 | wpb 11163.9 | bsz 455.2 | num_updates 7586 | best_loss 3.965
+2021-11-20 17:29:54 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:30:01 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint55.pt (epoch 55 @ 7586 updates, score 3.965) (writing took 7.507686582990573 seconds)
+2021-11-20 17:30:02 | INFO | fairseq_cli.train | end of epoch 55 (average epoch stats below)
+2021-11-20 17:30:02 | INFO | train | epoch 055 | loss 3.465 | nll_loss 1.892 | distil_rate 0 | ppl 3.71 | wps 58921.3 | ups 2.07 | wpb 28532.5 | bsz 1156.4 | num_updates 7586 | lr 0.00062254 | gnorm 0.491 | loss_scale 37 | train_wall 54 | wall 3619
+2021-11-20 17:30:02 | INFO | fairseq.trainer | begin training epoch 56
+2021-11-20 17:30:09 | INFO | train_inner | epoch 056:     14 / 138 loss=3.475, nll_loss=1.904, distil_rate=0, ppl=3.74, wps=55088.5, ups=1.94, wpb=28467.9, bsz=1159.4, num_updates=7600, lr=0.000621966, gnorm=0.495, loss_scale=44, train_wall=39, wall=3627
+2021-11-20 17:30:48 | INFO | train_inner | epoch 056:    114 / 138 loss=3.446, nll_loss=1.87, distil_rate=0, ppl=3.66, wps=73333.3, ups=2.56, wpb=28687.1, bsz=1160.7, num_updates=7700, lr=0.000617914, gnorm=0.487, loss_scale=64, train_wall=39, wall=3666
+2021-11-20 17:30:57 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:31:00 | INFO | valid | epoch 056 | valid on 'valid' subset | loss 3.981 | nll_loss 2.353 | distil_rate 0 | ppl 5.11 | wps 184365 | wpb 11163.9 | bsz 455.2 | num_updates 7724 | best_loss 3.965
+2021-11-20 17:31:00 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:31:04 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint56.pt (epoch 56 @ 7724 updates, score 3.981) (writing took 3.4277279850066407 seconds)
+2021-11-20 17:31:04 | INFO | fairseq_cli.train | end of epoch 56 (average epoch stats below)
+2021-11-20 17:31:04 | INFO | train | epoch 056 | loss 3.447 | nll_loss 1.872 | distil_rate 0 | ppl 3.66 | wps 63288.4 | ups 2.22 | wpb 28537 | bsz 1154.7 | num_updates 7724 | lr 0.000616954 | gnorm 0.495 | loss_scale 64 | train_wall 54 | wall 3682
+2021-11-20 17:31:04 | INFO | fairseq.trainer | begin training epoch 57
+2021-11-20 17:31:36 | INFO | train_inner | epoch 057:     76 / 138 loss=3.422, nll_loss=1.843, distil_rate=0, ppl=3.59, wps=59447.7, ups=2.09, wpb=28382, bsz=1155.2, num_updates=7800, lr=0.000613941, gnorm=0.492, loss_scale=64, train_wall=39, wall=3714
+2021-11-20 17:32:00 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:32:03 | INFO | valid | epoch 057 | valid on 'valid' subset | loss 3.999 | nll_loss 2.365 | distil_rate 0 | ppl 5.15 | wps 179101 | wpb 11163.9 | bsz 455.2 | num_updates 7862 | best_loss 3.965
+2021-11-20 17:32:03 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:32:07 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint57.pt (epoch 57 @ 7862 updates, score 3.999) (writing took 4.2808776650053915 seconds)
+2021-11-20 17:32:07 | INFO | fairseq_cli.train | end of epoch 57 (average epoch stats below)
+2021-11-20 17:32:07 | INFO | train | epoch 057 | loss 3.431 | nll_loss 1.853 | distil_rate 0 | ppl 3.61 | wps 61993.9 | ups 2.17 | wpb 28536.4 | bsz 1156.4 | num_updates 7862 | lr 0.000611515 | gnorm 0.493 | loss_scale 64 | train_wall 54 | wall 3745
+2021-11-20 17:32:07 | INFO | fairseq.trainer | begin training epoch 58
+2021-11-20 17:32:24 | INFO | train_inner | epoch 058:     38 / 138 loss=3.428, nll_loss=1.85, distil_rate=0, ppl=3.6, wps=59265.8, ups=2.07, wpb=28589.5, bsz=1148.6, num_updates=7900, lr=0.000610043, gnorm=0.5, loss_scale=64, train_wall=39, wall=3762
+2021-11-20 17:33:03 | INFO | train_inner | epoch 058:    138 / 138 loss=3.429, nll_loss=1.851, distil_rate=0, ppl=3.61, wps=72233.6, ups=2.54, wpb=28437.1, bsz=1161, num_updates=8000, lr=0.000606218, gnorm=0.49, loss_scale=64, train_wall=39, wall=3801
+2021-11-20 17:33:03 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:33:06 | INFO | valid | epoch 058 | valid on 'valid' subset | loss 3.985 | nll_loss 2.346 | distil_rate 0 | ppl 5.08 | wps 174923 | wpb 11163.9 | bsz 455.2 | num_updates 8000 | best_loss 3.965
+2021-11-20 17:33:06 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:33:10 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint58.pt (epoch 58 @ 8000 updates, score 3.985) (writing took 3.554169606999494 seconds)
+2021-11-20 17:33:10 | INFO | fairseq_cli.train | end of epoch 58 (average epoch stats below)
+2021-11-20 17:33:10 | INFO | train | epoch 058 | loss 3.414 | nll_loss 1.834 | distil_rate 0 | ppl 3.56 | wps 62939.5 | ups 2.21 | wpb 28537.8 | bsz 1158.7 | num_updates 8000 | lr 0.000606218 | gnorm 0.491 | loss_scale 64 | train_wall 54 | wall 3808
+2021-11-20 17:33:10 | INFO | fairseq.trainer | begin training epoch 59
+2021-11-20 17:33:51 | INFO | train_inner | epoch 059:    100 / 138 loss=3.385, nll_loss=1.8, distil_rate=0, ppl=3.48, wps=59804.5, ups=2.08, wpb=28709.7, bsz=1171, num_updates=8100, lr=0.000602464, gnorm=0.481, loss_scale=64, train_wall=40, wall=3849
+2021-11-20 17:34:06 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:34:09 | INFO | valid | epoch 059 | valid on 'valid' subset | loss 3.959 | nll_loss 2.334 | distil_rate 0 | ppl 5.04 | wps 161860 | wpb 11163.9 | bsz 455.2 | num_updates 8138 | best_loss 3.959
+2021-11-20 17:34:09 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:34:14 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint59.pt (epoch 59 @ 8138 updates, score 3.959) (writing took 5.192245042999275 seconds)
+2021-11-20 17:34:15 | INFO | fairseq_cli.train | end of epoch 59 (average epoch stats below)
+2021-11-20 17:34:15 | INFO | train | epoch 059 | loss 3.398 | nll_loss 1.815 | distil_rate 0 | ppl 3.52 | wps 60852.6 | ups 2.13 | wpb 28538.6 | bsz 1157.5 | num_updates 8138 | lr 0.000601056 | gnorm 0.487 | loss_scale 64 | train_wall 55 | wall 3873
+2021-11-20 17:34:15 | INFO | fairseq.trainer | begin training epoch 60
+2021-11-20 17:34:41 | INFO | train_inner | epoch 060:     62 / 138 loss=3.391, nll_loss=1.805, distil_rate=0, ppl=3.5, wps=57322.9, ups=2.02, wpb=28423.4, bsz=1127.5, num_updates=8200, lr=0.000598779, gnorm=0.489, loss_scale=64, train_wall=39, wall=3899
+2021-11-20 17:35:11 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:35:14 | INFO | valid | epoch 060 | valid on 'valid' subset | loss 3.992 | nll_loss 2.355 | distil_rate 0 | ppl 5.11 | wps 183766 | wpb 11163.9 | bsz 455.2 | num_updates 8276 | best_loss 3.959
+2021-11-20 17:35:14 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:35:17 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint60.pt (epoch 60 @ 8276 updates, score 3.992) (writing took 3.461849405997782 seconds)
+2021-11-20 17:35:17 | INFO | fairseq_cli.train | end of epoch 60 (average epoch stats below)
+2021-11-20 17:35:17 | INFO | train | epoch 060 | loss 3.386 | nll_loss 1.801 | distil_rate 0 | ppl 3.48 | wps 62866 | ups 2.2 | wpb 28534.7 | bsz 1157.6 | num_updates 8276 | lr 0.000596024 | gnorm 0.498 | loss_scale 64 | train_wall 54 | wall 3935
+2021-11-20 17:35:17 | INFO | fairseq.trainer | begin training epoch 61
+2021-11-20 17:35:29 | INFO | train_inner | epoch 061:     24 / 138 loss=3.386, nll_loss=1.8, distil_rate=0, ppl=3.48, wps=59905.3, ups=2.1, wpb=28530.4, bsz=1173, num_updates=8300, lr=0.000595161, gnorm=0.512, loss_scale=64, train_wall=39, wall=3947
+2021-11-20 17:36:08 | INFO | train_inner | epoch 061:    124 / 138 loss=3.374, nll_loss=1.787, distil_rate=0, ppl=3.45, wps=73262, ups=2.55, wpb=28714.3, bsz=1184.5, num_updates=8400, lr=0.000591608, gnorm=0.484, loss_scale=64, train_wall=39, wall=3986
+2021-11-20 17:36:13 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:36:16 | INFO | valid | epoch 061 | valid on 'valid' subset | loss 3.978 | nll_loss 2.349 | distil_rate 0 | ppl 5.09 | wps 184101 | wpb 11163.9 | bsz 455.2 | num_updates 8414 | best_loss 3.959
+2021-11-20 17:36:16 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:36:20 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint61.pt (epoch 61 @ 8414 updates, score 3.978) (writing took 3.6740909810032463 seconds)
+2021-11-20 17:36:20 | INFO | fairseq_cli.train | end of epoch 61 (average epoch stats below)
+2021-11-20 17:36:20 | INFO | train | epoch 061 | loss 3.371 | nll_loss 1.783 | distil_rate 0 | ppl 3.44 | wps 62864.2 | ups 2.2 | wpb 28535.8 | bsz 1159.2 | num_updates 8414 | lr 0.000591116 | gnorm 0.497 | loss_scale 64 | train_wall 54 | wall 3998
+2021-11-20 17:36:20 | INFO | fairseq.trainer | begin training epoch 62
+2021-11-20 17:36:56 | INFO | train_inner | epoch 062:     86 / 138 loss=3.35, nll_loss=1.758, distil_rate=0, ppl=3.38, wps=59479.5, ups=2.09, wpb=28479.6, bsz=1154.4, num_updates=8500, lr=0.000588118, gnorm=0.511, loss_scale=64, train_wall=39, wall=4034
+2021-11-20 17:37:16 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:37:19 | INFO | valid | epoch 062 | valid on 'valid' subset | loss 3.993 | nll_loss 2.359 | distil_rate 0 | ppl 5.13 | wps 181928 | wpb 11163.9 | bsz 455.2 | num_updates 8552 | best_loss 3.959
+2021-11-20 17:37:19 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:37:23 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint62.pt (epoch 62 @ 8552 updates, score 3.993) (writing took 3.511546049005119 seconds)
+2021-11-20 17:37:23 | INFO | fairseq_cli.train | end of epoch 62 (average epoch stats below)
+2021-11-20 17:37:23 | INFO | train | epoch 062 | loss 3.359 | nll_loss 1.769 | distil_rate 0 | ppl 3.41 | wps 62726.6 | ups 2.2 | wpb 28550 | bsz 1159 | num_updates 8552 | lr 0.000586327 | gnorm 0.502 | loss_scale 64 | train_wall 54 | wall 4061
+2021-11-20 17:37:23 | INFO | fairseq.trainer | begin training epoch 63
+2021-11-20 17:37:44 | INFO | train_inner | epoch 063:     48 / 138 loss=3.351, nll_loss=1.76, distil_rate=0, ppl=3.39, wps=59619.5, ups=2.09, wpb=28552.5, bsz=1154.8, num_updates=8600, lr=0.000584688, gnorm=0.49, loss_scale=64, train_wall=39, wall=4082
+2021-11-20 17:38:19 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:38:22 | INFO | valid | epoch 063 | valid on 'valid' subset | loss 3.972 | nll_loss 2.346 | distil_rate 0 | ppl 5.08 | wps 184913 | wpb 11163.9 | bsz 455.2 | num_updates 8690 | best_loss 3.959
+2021-11-20 17:38:22 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:38:26 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint63.pt (epoch 63 @ 8690 updates, score 3.972) (writing took 3.81602525600465 seconds)
+2021-11-20 17:38:26 | INFO | fairseq_cli.train | end of epoch 63 (average epoch stats below)
+2021-11-20 17:38:26 | INFO | train | epoch 063 | loss 3.343 | nll_loss 1.751 | distil_rate 0 | ppl 3.37 | wps 62318.2 | ups 2.18 | wpb 28537.2 | bsz 1158.9 | num_updates 8690 | lr 0.000581653 | gnorm 0.493 | loss_scale 64 | train_wall 54 | wall 4124
+2021-11-20 17:38:26 | INFO | fairseq.trainer | begin training epoch 64
+2021-11-20 17:38:32 | INFO | train_inner | epoch 064:     10 / 138 loss=3.357, nll_loss=1.767, distil_rate=0, ppl=3.4, wps=59184.9, ups=2.08, wpb=28419.1, bsz=1139.6, num_updates=8700, lr=0.000581318, gnorm=0.504, loss_scale=64, train_wall=39, wall=4130
+2021-11-20 17:39:11 | INFO | train_inner | epoch 064:    110 / 138 loss=3.321, nll_loss=1.725, distil_rate=0, ppl=3.3, wps=72202.9, ups=2.53, wpb=28586.9, bsz=1165, num_updates=8800, lr=0.000578006, gnorm=0.484, loss_scale=64, train_wall=39, wall=4169
+2021-11-20 17:39:22 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:39:25 | INFO | valid | epoch 064 | valid on 'valid' subset | loss 3.968 | nll_loss 2.335 | distil_rate 0 | ppl 5.05 | wps 179100 | wpb 11163.9 | bsz 455.2 | num_updates 8828 | best_loss 3.959
+2021-11-20 17:39:25 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:39:28 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint64.pt (epoch 64 @ 8828 updates, score 3.968) (writing took 3.3537567269959254 seconds)
+2021-11-20 17:39:29 | INFO | fairseq_cli.train | end of epoch 64 (average epoch stats below)
+2021-11-20 17:39:29 | INFO | train | epoch 064 | loss 3.332 | nll_loss 1.738 | distil_rate 0 | ppl 3.34 | wps 62815.6 | ups 2.2 | wpb 28532.7 | bsz 1155.8 | num_updates 8828 | lr 0.000577089 | gnorm 0.499 | loss_scale 64 | train_wall 54 | wall 4187
+2021-11-20 17:39:29 | INFO | fairseq.trainer | begin training epoch 65
+2021-11-20 17:39:58 | INFO | train_inner | epoch 065:     72 / 138 loss=3.32, nll_loss=1.723, distil_rate=0, ppl=3.3, wps=60409.9, ups=2.12, wpb=28502.7, bsz=1155.6, num_updates=8900, lr=0.00057475, gnorm=0.503, loss_scale=64, train_wall=39, wall=4216
+2021-11-20 17:40:24 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:40:27 | INFO | valid | epoch 065 | valid on 'valid' subset | loss 3.971 | nll_loss 2.337 | distil_rate 0 | ppl 5.05 | wps 174217 | wpb 11163.9 | bsz 455.2 | num_updates 8966 | best_loss 3.959
+2021-11-20 17:40:27 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:40:31 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint65.pt (epoch 65 @ 8966 updates, score 3.971) (writing took 3.8250056440010667 seconds)
+2021-11-20 17:40:31 | INFO | fairseq_cli.train | end of epoch 65 (average epoch stats below)
+2021-11-20 17:40:31 | INFO | train | epoch 065 | loss 3.318 | nll_loss 1.721 | distil_rate 0 | ppl 3.3 | wps 63069.3 | ups 2.21 | wpb 28537.7 | bsz 1159.8 | num_updates 8966 | lr 0.00057263 | gnorm 0.505 | loss_scale 64 | train_wall 54 | wall 4249
+2021-11-20 17:40:31 | INFO | fairseq.trainer | begin training epoch 66
+2021-11-20 17:40:46 | INFO | train_inner | epoch 066:     34 / 138 loss=3.325, nll_loss=1.729, distil_rate=0, ppl=3.32, wps=59598.1, ups=2.09, wpb=28575.9, bsz=1142, num_updates=9000, lr=0.000571548, gnorm=0.532, loss_scale=64, train_wall=39, wall=4264
+2021-11-20 17:41:26 | INFO | train_inner | epoch 066:    134 / 138 loss=3.315, nll_loss=1.718, distil_rate=0, ppl=3.29, wps=72518.3, ups=2.53, wpb=28686.4, bsz=1186.6, num_updates=9100, lr=0.000568399, gnorm=0.484, loss_scale=64, train_wall=39, wall=4304
+2021-11-20 17:41:27 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:41:30 | INFO | valid | epoch 066 | valid on 'valid' subset | loss 3.976 | nll_loss 2.352 | distil_rate 0 | ppl 5.1 | wps 174053 | wpb 11163.9 | bsz 455.2 | num_updates 9104 | best_loss 3.959
+2021-11-20 17:41:30 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:41:34 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint66.pt (epoch 66 @ 9104 updates, score 3.976) (writing took 3.376647259006859 seconds)
+2021-11-20 17:41:34 | INFO | fairseq_cli.train | end of epoch 66 (average epoch stats below)
+2021-11-20 17:41:34 | INFO | train | epoch 066 | loss 3.31 | nll_loss 1.712 | distil_rate 0 | ppl 3.28 | wps 62778.2 | ups 2.2 | wpb 28545.4 | bsz 1157.6 | num_updates 9104 | lr 0.000568274 | gnorm 0.507 | loss_scale 64 | train_wall 54 | wall 4312
+2021-11-20 17:41:34 | INFO | fairseq.trainer | begin training epoch 67
+2021-11-20 17:42:13 | INFO | train_inner | epoch 067:     96 / 138 loss=3.286, nll_loss=1.684, distil_rate=0, ppl=3.21, wps=59816.3, ups=2.1, wpb=28463.8, bsz=1149.3, num_updates=9200, lr=0.000565301, gnorm=0.506, loss_scale=64, train_wall=39, wall=4351
+2021-11-20 17:42:30 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:42:33 | INFO | valid | epoch 067 | valid on 'valid' subset | loss 3.975 | nll_loss 2.342 | distil_rate 0 | ppl 5.07 | wps 170291 | wpb 11163.9 | bsz 455.2 | num_updates 9242 | best_loss 3.959
+2021-11-20 17:42:33 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:42:38 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint67.pt (epoch 67 @ 9242 updates, score 3.975) (writing took 4.899923441000283 seconds)
+2021-11-20 17:42:38 | INFO | fairseq_cli.train | end of epoch 67 (average epoch stats below)
+2021-11-20 17:42:38 | INFO | train | epoch 067 | loss 3.297 | nll_loss 1.697 | distil_rate 0 | ppl 3.24 | wps 61439.5 | ups 2.15 | wpb 28530.8 | bsz 1158.9 | num_updates 9242 | lr 0.000564015 | gnorm 0.504 | loss_scale 64 | train_wall 54 | wall 4376
+2021-11-20 17:42:38 | INFO | fairseq.trainer | begin training epoch 68
+2021-11-20 17:43:03 | INFO | train_inner | epoch 068:     58 / 138 loss=3.288, nll_loss=1.686, distil_rate=0, ppl=3.22, wps=57812.1, ups=2.03, wpb=28457.8, bsz=1156.4, num_updates=9300, lr=0.000562254, gnorm=0.501, loss_scale=64, train_wall=39, wall=4401
+2021-11-20 17:43:34 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:43:37 | INFO | valid | epoch 068 | valid on 'valid' subset | loss 3.969 | nll_loss 2.339 | distil_rate 0 | ppl 5.06 | wps 166419 | wpb 11163.9 | bsz 455.2 | num_updates 9380 | best_loss 3.959
+2021-11-20 17:43:37 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:43:40 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint68.pt (epoch 68 @ 9380 updates, score 3.969) (writing took 3.3901626269944245 seconds)
+2021-11-20 17:43:41 | INFO | fairseq_cli.train | end of epoch 68 (average epoch stats below)
+2021-11-20 17:43:41 | INFO | train | epoch 068 | loss 3.284 | nll_loss 1.682 | distil_rate 0 | ppl 3.21 | wps 62792.7 | ups 2.2 | wpb 28534.7 | bsz 1157.3 | num_updates 9380 | lr 0.000559851 | gnorm 0.506 | loss_scale 64 | train_wall 54 | wall 4438
+2021-11-20 17:43:41 | INFO | fairseq.trainer | begin training epoch 69
+2021-11-20 17:43:50 | INFO | train_inner | epoch 069:     20 / 138 loss=3.292, nll_loss=1.691, distil_rate=0, ppl=3.23, wps=59773.4, ups=2.1, wpb=28489.3, bsz=1143.7, num_updates=9400, lr=0.000559255, gnorm=0.524, loss_scale=64, train_wall=39, wall=4448
+2021-11-20 17:44:30 | INFO | train_inner | epoch 069:    120 / 138 loss=3.269, nll_loss=1.665, distil_rate=0, ppl=3.17, wps=72723, ups=2.54, wpb=28625.7, bsz=1169.7, num_updates=9500, lr=0.000556304, gnorm=0.493, loss_scale=64, train_wall=39, wall=4488
+2021-11-20 17:44:37 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:44:40 | INFO | valid | epoch 069 | valid on 'valid' subset | loss 3.956 | nll_loss 2.326 | distil_rate 0 | ppl 5.02 | wps 179646 | wpb 11163.9 | bsz 455.2 | num_updates 9518 | best_loss 3.956
+2021-11-20 17:44:40 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:44:47 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint69.pt (epoch 69 @ 9518 updates, score 3.956) (writing took 7.254344414002844 seconds)
+2021-11-20 17:44:47 | INFO | fairseq_cli.train | end of epoch 69 (average epoch stats below)
+2021-11-20 17:44:47 | INFO | train | epoch 069 | loss 3.271 | nll_loss 1.666 | distil_rate 0 | ppl 3.17 | wps 59250.1 | ups 2.08 | wpb 28540.3 | bsz 1159.5 | num_updates 9518 | lr 0.000555777 | gnorm 0.504 | loss_scale 64 | train_wall 54 | wall 4505
+2021-11-20 17:44:47 | INFO | fairseq.trainer | begin training epoch 70
+2021-11-20 17:45:21 | INFO | train_inner | epoch 070:     82 / 138 loss=3.257, nll_loss=1.65, distil_rate=0, ppl=3.14, wps=55641, ups=1.95, wpb=28577, bsz=1155.2, num_updates=9600, lr=0.000553399, gnorm=0.502, loss_scale=64, train_wall=39, wall=4539
+2021-11-20 17:45:38 | INFO | fairseq.trainer | NOTE: overflow detected, setting loss scale to: 64.0
+2021-11-20 17:45:43 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:45:46 | INFO | valid | epoch 070 | valid on 'valid' subset | loss 3.991 | nll_loss 2.36 | distil_rate 0 | ppl 5.13 | wps 184301 | wpb 11163.9 | bsz 455.2 | num_updates 9655 | best_loss 3.956
+2021-11-20 17:45:46 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:45:49 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint70.pt (epoch 70 @ 9655 updates, score 3.991) (writing took 3.476383289991645 seconds)
+2021-11-20 17:45:49 | INFO | fairseq_cli.train | end of epoch 70 (average epoch stats below)
+2021-11-20 17:45:50 | INFO | train | epoch 070 | loss 3.26 | nll_loss 1.654 | distil_rate 0 | ppl 3.15 | wps 62542.6 | ups 2.19 | wpb 28541.2 | bsz 1157.7 | num_updates 9655 | lr 0.00055182 | gnorm 0.503 | loss_scale 78 | train_wall 54 | wall 4567
+2021-11-20 17:45:50 | INFO | fairseq.trainer | begin training epoch 71
+2021-11-20 17:46:09 | INFO | train_inner | epoch 071:     45 / 138 loss=3.253, nll_loss=1.646, distil_rate=0, ppl=3.13, wps=59423.6, ups=2.09, wpb=28404, bsz=1166.1, num_updates=9700, lr=0.000550539, gnorm=0.513, loss_scale=83, train_wall=40, wall=4587
+2021-11-20 17:46:46 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:46:49 | INFO | valid | epoch 071 | valid on 'valid' subset | loss 3.965 | nll_loss 2.338 | distil_rate 0 | ppl 5.06 | wps 184769 | wpb 11163.9 | bsz 455.2 | num_updates 9793 | best_loss 3.956
+2021-11-20 17:46:49 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:46:52 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint71.pt (epoch 71 @ 9793 updates, score 3.965) (writing took 3.5763971980049973 seconds)
+2021-11-20 17:46:52 | INFO | fairseq_cli.train | end of epoch 71 (average epoch stats below)
+2021-11-20 17:46:52 | INFO | train | epoch 071 | loss 3.25 | nll_loss 1.642 | distil_rate 0 | ppl 3.12 | wps 62833.2 | ups 2.2 | wpb 28540.4 | bsz 1158.6 | num_updates 9793 | lr 0.000547918 | gnorm 0.502 | loss_scale 64 | train_wall 54 | wall 4630
+2021-11-20 17:46:52 | INFO | fairseq.trainer | begin training epoch 72
+2021-11-20 17:46:57 | INFO | train_inner | epoch 072:      7 / 138 loss=3.256, nll_loss=1.65, distil_rate=0, ppl=3.14, wps=59327.3, ups=2.08, wpb=28524.5, bsz=1171, num_updates=9800, lr=0.000547723, gnorm=0.495, loss_scale=64, train_wall=39, wall=4635
+2021-11-20 17:47:36 | INFO | train_inner | epoch 072:    107 / 138 loss=3.24, nll_loss=1.63, distil_rate=0, ppl=3.1, wps=73020.4, ups=2.55, wpb=28681, bsz=1132.6, num_updates=9900, lr=0.000544949, gnorm=0.492, loss_scale=64, train_wall=39, wall=4674
+2021-11-20 17:47:48 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:47:51 | INFO | valid | epoch 072 | valid on 'valid' subset | loss 3.958 | nll_loss 2.327 | distil_rate 0 | ppl 5.02 | wps 156070 | wpb 11163.9 | bsz 455.2 | num_updates 9931 | best_loss 3.956
+2021-11-20 17:47:51 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:47:55 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint72.pt (epoch 72 @ 9931 updates, score 3.958) (writing took 3.5123040420003235 seconds)
+2021-11-20 17:47:55 | INFO | fairseq_cli.train | end of epoch 72 (average epoch stats below)
+2021-11-20 17:47:55 | INFO | train | epoch 072 | loss 3.241 | nll_loss 1.632 | distil_rate 0 | ppl 3.1 | wps 62772.8 | ups 2.2 | wpb 28539 | bsz 1157.1 | num_updates 9931 | lr 0.000544098 | gnorm 0.498 | loss_scale 64 | train_wall 54 | wall 4693
+2021-11-20 17:47:55 | INFO | fairseq.trainer | begin training epoch 73
+2021-11-20 17:48:06 | INFO | fairseq.trainer | NOTE: overflow detected, setting loss scale to: 32.0
+2021-11-20 17:48:25 | INFO | train_inner | epoch 073:     70 / 138 loss=3.226, nll_loss=1.614, distil_rate=0, ppl=3.06, wps=58857.7, ups=2.07, wpb=28459.2, bsz=1162.2, num_updates=10000, lr=0.000542218, gnorm=0.502, loss_scale=49, train_wall=40, wall=4723
+2021-11-20 17:48:52 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:48:54 | INFO | valid | epoch 073 | valid on 'valid' subset | loss 3.979 | nll_loss 2.347 | distil_rate 0 | ppl 5.09 | wps 184648 | wpb 11163.9 | bsz 455.2 | num_updates 10068 | best_loss 3.956
+2021-11-20 17:48:54 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:48:58 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint73.pt (epoch 73 @ 10068 updates, score 3.979) (writing took 3.915381785001955 seconds)
+2021-11-20 17:48:58 | INFO | fairseq_cli.train | end of epoch 73 (average epoch stats below)
+2021-11-20 17:48:58 | INFO | train | epoch 073 | loss 3.23 | nll_loss 1.618 | distil_rate 0 | ppl 3.07 | wps 61696.7 | ups 2.16 | wpb 28543.6 | bsz 1155.1 | num_updates 10068 | lr 0.000540383 | gnorm 0.503 | loss_scale 37 | train_wall 54 | wall 4756
+2021-11-20 17:48:58 | INFO | fairseq.trainer | begin training epoch 74
+2021-11-20 17:49:13 | INFO | train_inner | epoch 074:     32 / 138 loss=3.235, nll_loss=1.625, distil_rate=0, ppl=3.08, wps=59146.8, ups=2.07, wpb=28586.8, bsz=1158.1, num_updates=10100, lr=0.000539527, gnorm=0.501, loss_scale=32, train_wall=39, wall=4771
+2021-11-20 17:49:52 | INFO | train_inner | epoch 074:    132 / 138 loss=3.221, nll_loss=1.609, distil_rate=0, ppl=3.05, wps=72338.8, ups=2.53, wpb=28615.9, bsz=1177.4, num_updates=10200, lr=0.000536875, gnorm=0.491, loss_scale=32, train_wall=39, wall=4810
+2021-11-20 17:49:55 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:49:58 | INFO | valid | epoch 074 | valid on 'valid' subset | loss 3.971 | nll_loss 2.342 | distil_rate 0 | ppl 5.07 | wps 186048 | wpb 11163.9 | bsz 455.2 | num_updates 10206 | best_loss 3.956
+2021-11-20 17:49:58 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:50:01 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint74.pt (epoch 74 @ 10206 updates, score 3.971) (writing took 3.0959132879943354 seconds)
+2021-11-20 17:50:01 | INFO | fairseq_cli.train | end of epoch 74 (average epoch stats below)
+2021-11-20 17:50:01 | INFO | train | epoch 074 | loss 3.219 | nll_loss 1.605 | distil_rate 0 | ppl 3.04 | wps 62844.6 | ups 2.2 | wpb 28539.2 | bsz 1158.7 | num_updates 10206 | lr 0.000536718 | gnorm 0.498 | loss_scale 32 | train_wall 54 | wall 4819
+2021-11-20 17:50:01 | INFO | fairseq.trainer | begin training epoch 75
+2021-11-20 17:50:40 | INFO | train_inner | epoch 075:     94 / 138 loss=3.203, nll_loss=1.587, distil_rate=0, ppl=3, wps=59918.3, ups=2.11, wpb=28396.7, bsz=1150.2, num_updates=10300, lr=0.000534263, gnorm=0.508, loss_scale=32, train_wall=39, wall=4858
+2021-11-20 17:50:57 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:51:00 | INFO | valid | epoch 075 | valid on 'valid' subset | loss 3.971 | nll_loss 2.344 | distil_rate 0 | ppl 5.08 | wps 172089 | wpb 11163.9 | bsz 455.2 | num_updates 10344 | best_loss 3.956
+2021-11-20 17:51:00 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:51:04 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint75.pt (epoch 75 @ 10344 updates, score 3.971) (writing took 3.5907189319987083 seconds)
+2021-11-20 17:51:04 | INFO | fairseq_cli.train | end of epoch 75 (average epoch stats below)
+2021-11-20 17:51:04 | INFO | train | epoch 075 | loss 3.211 | nll_loss 1.596 | distil_rate 0 | ppl 3.02 | wps 62826.8 | ups 2.2 | wpb 28534.3 | bsz 1159.1 | num_updates 10344 | lr 0.000533125 | gnorm 0.509 | loss_scale 32 | train_wall 54 | wall 4882
+2021-11-20 17:51:04 | INFO | fairseq.trainer | begin training epoch 76
+2021-11-20 17:51:28 | INFO | train_inner | epoch 076:     56 / 138 loss=3.202, nll_loss=1.586, distil_rate=0, ppl=3, wps=59503.1, ups=2.08, wpb=28545.5, bsz=1171.3, num_updates=10400, lr=0.000531688, gnorm=0.515, loss_scale=32, train_wall=39, wall=4906
+2021-11-20 17:52:00 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:52:03 | INFO | valid | epoch 076 | valid on 'valid' subset | loss 3.984 | nll_loss 2.354 | distil_rate 0 | ppl 5.11 | wps 172188 | wpb 11163.9 | bsz 455.2 | num_updates 10482 | best_loss 3.956
+2021-11-20 17:52:03 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:52:07 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint76.pt (epoch 76 @ 10482 updates, score 3.984) (writing took 3.6881882430025144 seconds)
+2021-11-20 17:52:07 | INFO | fairseq_cli.train | end of epoch 76 (average epoch stats below)
+2021-11-20 17:52:07 | INFO | train | epoch 076 | loss 3.199 | nll_loss 1.583 | distil_rate 0 | ppl 3 | wps 62486.9 | ups 2.19 | wpb 28545.9 | bsz 1160.2 | num_updates 10482 | lr 0.000529604 | gnorm 0.5 | loss_scale 32 | train_wall 54 | wall 4945
+2021-11-20 17:52:07 | INFO | fairseq.trainer | begin training epoch 77
+2021-11-20 17:52:16 | INFO | train_inner | epoch 077:     18 / 138 loss=3.206, nll_loss=1.59, distil_rate=0, ppl=3.01, wps=59556.7, ups=2.09, wpb=28431.1, bsz=1131.5, num_updates=10500, lr=0.00052915, gnorm=0.508, loss_scale=32, train_wall=39, wall=4954
+2021-11-20 17:52:55 | INFO | train_inner | epoch 077:    118 / 138 loss=3.192, nll_loss=1.575, distil_rate=0, ppl=2.98, wps=72808.1, ups=2.53, wpb=28755.4, bsz=1167.7, num_updates=10600, lr=0.000526648, gnorm=0.503, loss_scale=32, train_wall=39, wall=4993
+2021-11-20 17:53:03 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:53:06 | INFO | valid | epoch 077 | valid on 'valid' subset | loss 3.973 | nll_loss 2.347 | distil_rate 0 | ppl 5.09 | wps 185322 | wpb 11163.9 | bsz 455.2 | num_updates 10620 | best_loss 3.956
+2021-11-20 17:53:06 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:53:11 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint77.pt (epoch 77 @ 10620 updates, score 3.973) (writing took 4.901834364005481 seconds)
+2021-11-20 17:53:11 | INFO | fairseq_cli.train | end of epoch 77 (average epoch stats below)
+2021-11-20 17:53:11 | INFO | train | epoch 077 | loss 3.192 | nll_loss 1.575 | distil_rate 0 | ppl 2.98 | wps 61568.8 | ups 2.16 | wpb 28537.7 | bsz 1158.4 | num_updates 10620 | lr 0.000526152 | gnorm 0.511 | loss_scale 32 | train_wall 54 | wall 5009
+2021-11-20 17:53:11 | INFO | fairseq.trainer | begin training epoch 78
+2021-11-20 17:53:44 | INFO | train_inner | epoch 078:     80 / 138 loss=3.172, nll_loss=1.551, distil_rate=0, ppl=2.93, wps=58274.1, ups=2.04, wpb=28596.1, bsz=1177, num_updates=10700, lr=0.000524182, gnorm=0.499, loss_scale=32, train_wall=39, wall=5042
+2021-11-20 17:54:07 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:54:10 | INFO | valid | epoch 078 | valid on 'valid' subset | loss 3.995 | nll_loss 2.361 | distil_rate 0 | ppl 5.14 | wps 184690 | wpb 11163.9 | bsz 455.2 | num_updates 10758 | best_loss 3.956
+2021-11-20 17:54:10 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:54:13 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint78.pt (epoch 78 @ 10758 updates, score 3.995) (writing took 3.412526314990828 seconds)
+2021-11-20 17:54:13 | INFO | fairseq_cli.train | end of epoch 78 (average epoch stats below)
+2021-11-20 17:54:13 | INFO | train | epoch 078 | loss 3.182 | nll_loss 1.563 | distil_rate 0 | ppl 2.95 | wps 62977.1 | ups 2.21 | wpb 28536.3 | bsz 1158.7 | num_updates 10758 | lr 0.000522767 | gnorm 0.519 | loss_scale 32 | train_wall 54 | wall 5071
+2021-11-20 17:54:13 | INFO | fairseq.trainer | begin training epoch 79
+2021-11-20 17:54:31 | INFO | train_inner | epoch 079:     42 / 138 loss=3.184, nll_loss=1.565, distil_rate=0, ppl=2.96, wps=59882.3, ups=2.11, wpb=28344.4, bsz=1144.2, num_updates=10800, lr=0.000521749, gnorm=0.536, loss_scale=32, train_wall=39, wall=5089
+2021-11-20 17:55:10 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:55:12 | INFO | valid | epoch 079 | valid on 'valid' subset | loss 3.978 | nll_loss 2.354 | distil_rate 0 | ppl 5.11 | wps 184927 | wpb 11163.9 | bsz 455.2 | num_updates 10896 | best_loss 3.956
+2021-11-20 17:55:12 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:55:16 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint79.pt (epoch 79 @ 10896 updates, score 3.978) (writing took 3.5822171110048657 seconds)
+2021-11-20 17:55:16 | INFO | fairseq_cli.train | end of epoch 79 (average epoch stats below)
+2021-11-20 17:55:16 | INFO | train | epoch 079 | loss 3.174 | nll_loss 1.553 | distil_rate 0 | ppl 2.93 | wps 62657.2 | ups 2.2 | wpb 28538.9 | bsz 1158.9 | num_updates 10896 | lr 0.000519446 | gnorm 0.511 | loss_scale 32 | train_wall 54 | wall 5134
+2021-11-20 17:55:16 | INFO | fairseq.trainer | begin training epoch 80
+2021-11-20 17:55:20 | INFO | train_inner | epoch 080:      4 / 138 loss=3.186, nll_loss=1.568, distil_rate=0, ppl=2.97, wps=59257.5, ups=2.08, wpb=28475, bsz=1150.9, num_updates=10900, lr=0.00051935, gnorm=0.521, loss_scale=32, train_wall=40, wall=5137
+2021-11-20 17:55:55 | INFO | fairseq.trainer | NOTE: overflow detected, setting loss scale to: 16.0
+2021-11-20 17:55:59 | INFO | train_inner | epoch 080:    105 / 138 loss=3.159, nll_loss=1.534, distil_rate=0, ppl=2.9, wps=72214.4, ups=2.51, wpb=28730.7, bsz=1149.8, num_updates=11000, lr=0.000516984, gnorm=0.495, loss_scale=30, train_wall=40, wall=5177
+2021-11-20 17:56:12 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:56:15 | INFO | valid | epoch 080 | valid on 'valid' subset | loss 3.981 | nll_loss 2.354 | distil_rate 0 | ppl 5.11 | wps 175154 | wpb 11163.9 | bsz 455.2 | num_updates 11033 | best_loss 3.956
+2021-11-20 17:56:15 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:56:19 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint80.pt (epoch 80 @ 11033 updates, score 3.981) (writing took 3.4356120390002616 seconds)
+2021-11-20 17:56:19 | INFO | fairseq_cli.train | end of epoch 80 (average epoch stats below)
+2021-11-20 17:56:19 | INFO | train | epoch 080 | loss 3.165 | nll_loss 1.542 | distil_rate 0 | ppl 2.91 | wps 62412.5 | ups 2.19 | wpb 28531.7 | bsz 1155 | num_updates 11033 | lr 0.000516211 | gnorm 0.505 | loss_scale 27 | train_wall 54 | wall 5197
+2021-11-20 17:56:19 | INFO | fairseq.trainer | begin training epoch 81
+2021-11-20 17:56:47 | INFO | train_inner | epoch 081:     67 / 138 loss=3.149, nll_loss=1.524, distil_rate=0, ppl=2.88, wps=59517.2, ups=2.09, wpb=28417.6, bsz=1158.8, num_updates=11100, lr=0.00051465, gnorm=0.502, loss_scale=16, train_wall=39, wall=5225
+2021-11-20 17:57:15 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:57:18 | INFO | valid | epoch 081 | valid on 'valid' subset | loss 4.001 | nll_loss 2.371 | distil_rate 0 | ppl 5.17 | wps 143489 | wpb 11163.9 | bsz 455.2 | num_updates 11171 | best_loss 3.956
+2021-11-20 17:57:18 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:57:22 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint81.pt (epoch 81 @ 11171 updates, score 4.001) (writing took 3.854129485989688 seconds)
+2021-11-20 17:57:22 | INFO | fairseq_cli.train | end of epoch 81 (average epoch stats below)
+2021-11-20 17:57:22 | INFO | train | epoch 081 | loss 3.155 | nll_loss 1.531 | distil_rate 0 | ppl 2.89 | wps 62363.7 | ups 2.19 | wpb 28538.1 | bsz 1157.7 | num_updates 11171 | lr 0.000513012 | gnorm 0.508 | loss_scale 16 | train_wall 54 | wall 5260
+2021-11-20 17:57:22 | INFO | fairseq.trainer | begin training epoch 82
+2021-11-20 17:57:35 | INFO | train_inner | epoch 082:     29 / 138 loss=3.167, nll_loss=1.545, distil_rate=0, ppl=2.92, wps=58964.7, ups=2.08, wpb=28407.9, bsz=1142.4, num_updates=11200, lr=0.000512348, gnorm=0.533, loss_scale=16, train_wall=39, wall=5273
+2021-11-20 17:58:15 | INFO | train_inner | epoch 082:    129 / 138 loss=3.149, nll_loss=1.525, distil_rate=0, ppl=2.88, wps=73186.1, ups=2.54, wpb=28800.5, bsz=1197, num_updates=11300, lr=0.000510075, gnorm=0.497, loss_scale=16, train_wall=39, wall=5313
+2021-11-20 17:58:18 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:58:21 | INFO | valid | epoch 082 | valid on 'valid' subset | loss 3.993 | nll_loss 2.361 | distil_rate 0 | ppl 5.14 | wps 159500 | wpb 11163.9 | bsz 455.2 | num_updates 11309 | best_loss 3.956
+2021-11-20 17:58:21 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:58:25 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint82.pt (epoch 82 @ 11309 updates, score 3.993) (writing took 3.8833443720068317 seconds)
+2021-11-20 17:58:25 | INFO | fairseq_cli.train | end of epoch 82 (average epoch stats below)
+2021-11-20 17:58:25 | INFO | train | epoch 082 | loss 3.152 | nll_loss 1.527 | distil_rate 0 | ppl 2.88 | wps 62402.2 | ups 2.19 | wpb 28539.6 | bsz 1159.9 | num_updates 11309 | lr 0.000509872 | gnorm 0.521 | loss_scale 16 | train_wall 54 | wall 5323
+2021-11-20 17:58:25 | INFO | fairseq.trainer | begin training epoch 83
+2021-11-20 17:59:02 | INFO | train_inner | epoch 083:     91 / 138 loss=3.131, nll_loss=1.502, distil_rate=0, ppl=2.83, wps=59449.1, ups=2.09, wpb=28484.9, bsz=1161.2, num_updates=11400, lr=0.000507833, gnorm=0.507, loss_scale=16, train_wall=39, wall=5360
+2021-11-20 17:59:21 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 17:59:24 | INFO | valid | epoch 083 | valid on 'valid' subset | loss 3.993 | nll_loss 2.365 | distil_rate 0 | ppl 5.15 | wps 176400 | wpb 11163.9 | bsz 455.2 | num_updates 11447 | best_loss 3.956
+2021-11-20 17:59:24 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 17:59:28 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint83.pt (epoch 83 @ 11447 updates, score 3.993) (writing took 3.777108586000395 seconds)
+2021-11-20 17:59:28 | INFO | fairseq_cli.train | end of epoch 83 (average epoch stats below)
+2021-11-20 17:59:28 | INFO | train | epoch 083 | loss 3.139 | nll_loss 1.512 | distil_rate 0 | ppl 2.85 | wps 62676 | ups 2.2 | wpb 28532.9 | bsz 1158.8 | num_updates 11447 | lr 0.00050679 | gnorm 0.503 | loss_scale 16 | train_wall 54 | wall 5386
+2021-11-20 17:59:28 | INFO | fairseq.trainer | begin training epoch 84
+2021-11-20 17:59:51 | INFO | train_inner | epoch 084:     53 / 138 loss=3.124, nll_loss=1.495, distil_rate=0, ppl=2.82, wps=59030.5, ups=2.08, wpb=28414.5, bsz=1167.1, num_updates=11500, lr=0.000505621, gnorm=0.502, loss_scale=16, train_wall=39, wall=5409
+2021-11-20 18:00:24 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 18:00:27 | INFO | valid | epoch 084 | valid on 'valid' subset | loss 3.995 | nll_loss 2.36 | distil_rate 0 | ppl 5.13 | wps 161693 | wpb 11163.9 | bsz 455.2 | num_updates 11585 | best_loss 3.956
+2021-11-20 18:00:27 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 18:00:31 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint84.pt (epoch 84 @ 11585 updates, score 3.995) (writing took 4.1249852730106795 seconds)
+2021-11-20 18:00:31 | INFO | fairseq_cli.train | end of epoch 84 (average epoch stats below)
+2021-11-20 18:00:31 | INFO | train | epoch 084 | loss 3.13 | nll_loss 1.502 | distil_rate 0 | ppl 2.83 | wps 61905.2 | ups 2.17 | wpb 28535.9 | bsz 1158.7 | num_updates 11585 | lr 0.000503762 | gnorm 0.502 | loss_scale 16 | train_wall 54 | wall 5449
+2021-11-20 18:00:31 | INFO | fairseq.trainer | begin training epoch 85
+2021-11-20 18:00:39 | INFO | train_inner | epoch 085:     15 / 138 loss=3.151, nll_loss=1.525, distil_rate=0, ppl=2.88, wps=58528.7, ups=2.05, wpb=28543.2, bsz=1116.8, num_updates=11600, lr=0.000503436, gnorm=0.518, loss_scale=16, train_wall=39, wall=5457
+2021-11-20 18:01:19 | INFO | train_inner | epoch 085:    115 / 138 loss=3.119, nll_loss=1.489, distil_rate=0, ppl=2.81, wps=72465.7, ups=2.53, wpb=28671.7, bsz=1181, num_updates=11700, lr=0.00050128, gnorm=0.49, loss_scale=16, train_wall=39, wall=5497
+2021-11-20 18:01:28 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 18:01:31 | INFO | valid | epoch 085 | valid on 'valid' subset | loss 4 | nll_loss 2.366 | distil_rate 0 | ppl 5.15 | wps 167446 | wpb 11163.9 | bsz 455.2 | num_updates 11723 | best_loss 3.956
+2021-11-20 18:01:31 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 18:01:35 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint85.pt (epoch 85 @ 11723 updates, score 4.0) (writing took 4.250789539000834 seconds)
+2021-11-20 18:01:35 | INFO | fairseq_cli.train | end of epoch 85 (average epoch stats below)
+2021-11-20 18:01:35 | INFO | train | epoch 085 | loss 3.125 | nll_loss 1.496 | distil_rate 0 | ppl 2.82 | wps 61811.3 | ups 2.17 | wpb 28536.5 | bsz 1158.7 | num_updates 11723 | lr 0.000500788 | gnorm 0.503 | loss_scale 16 | train_wall 54 | wall 5513
+2021-11-20 18:01:35 | INFO | fairseq.trainer | begin training epoch 86
+2021-11-20 18:02:08 | INFO | train_inner | epoch 086:     77 / 138 loss=3.108, nll_loss=1.476, distil_rate=0, ppl=2.78, wps=58597.9, ups=2.06, wpb=28475.1, bsz=1161, num_updates=11800, lr=0.000499152, gnorm=0.506, loss_scale=16, train_wall=39, wall=5546
+2021-11-20 18:02:32 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 18:02:34 | INFO | valid | epoch 086 | valid on 'valid' subset | loss 3.994 | nll_loss 2.365 | distil_rate 0 | ppl 5.15 | wps 178618 | wpb 11163.9 | bsz 455.2 | num_updates 11861 | best_loss 3.956
+2021-11-20 18:02:34 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 18:02:38 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint86.pt (epoch 86 @ 11861 updates, score 3.994) (writing took 3.3815467709937366 seconds)
+2021-11-20 18:02:38 | INFO | fairseq_cli.train | end of epoch 86 (average epoch stats below)
+2021-11-20 18:02:38 | INFO | train | epoch 086 | loss 3.116 | nll_loss 1.486 | distil_rate 0 | ppl 2.8 | wps 62723.5 | ups 2.2 | wpb 28549.3 | bsz 1159.6 | num_updates 11861 | lr 0.000497867 | gnorm 0.506 | loss_scale 16 | train_wall 54 | wall 5576
+2021-11-20 18:02:38 | INFO | fairseq.trainer | begin training epoch 87
+2021-11-20 18:02:55 | INFO | train_inner | epoch 087:     39 / 138 loss=3.121, nll_loss=1.491, distil_rate=0, ppl=2.81, wps=60079.5, ups=2.1, wpb=28559.9, bsz=1151.5, num_updates=11900, lr=0.00049705, gnorm=0.514, loss_scale=16, train_wall=39, wall=5593
+2021-11-20 18:03:34 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 18:03:37 | INFO | valid | epoch 087 | valid on 'valid' subset | loss 3.99 | nll_loss 2.365 | distil_rate 0 | ppl 5.15 | wps 172430 | wpb 11163.9 | bsz 455.2 | num_updates 11999 | best_loss 3.956
+2021-11-20 18:03:37 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 18:03:40 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint87.pt (epoch 87 @ 11999 updates, score 3.99) (writing took 3.2718403309991118 seconds)
+2021-11-20 18:03:42 | INFO | fairseq_cli.train | end of epoch 87 (average epoch stats below)
+2021-11-20 18:03:42 | INFO | train | epoch 087 | loss 3.111 | nll_loss 1.479 | distil_rate 0 | ppl 2.79 | wps 61729.9 | ups 2.16 | wpb 28544.6 | bsz 1158.8 | num_updates 11999 | lr 0.000494995 | gnorm 0.525 | loss_scale 16 | train_wall 54 | wall 5640
+2021-11-20 18:03:42 | INFO | fairseq.trainer | begin training epoch 88
+2021-11-20 18:03:44 | INFO | train_inner | epoch 088:      1 / 138 loss=3.121, nll_loss=1.492, distil_rate=0, ppl=2.81, wps=58009.5, ups=2.04, wpb=28441.5, bsz=1156.9, num_updates=12000, lr=0.000494975, gnorm=0.53, loss_scale=16, train_wall=39, wall=5642
+2021-11-20 18:04:23 | INFO | train_inner | epoch 088:    101 / 138 loss=3.093, nll_loss=1.458, distil_rate=0, ppl=2.75, wps=73219.4, ups=2.56, wpb=28647.9, bsz=1153.4, num_updates=12100, lr=0.000492925, gnorm=0.5, loss_scale=16, train_wall=39, wall=5681
+2021-11-20 18:04:38 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 18:04:41 | INFO | valid | epoch 088 | valid on 'valid' subset | loss 4.008 | nll_loss 2.375 | distil_rate 0 | ppl 5.19 | wps 173810 | wpb 11163.9 | bsz 455.2 | num_updates 12137 | best_loss 3.956
+2021-11-20 18:04:41 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 18:04:44 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint88.pt (epoch 88 @ 12137 updates, score 4.008) (writing took 3.624242245001369 seconds)
+2021-11-20 18:04:44 | INFO | fairseq_cli.train | end of epoch 88 (average epoch stats below)
+2021-11-20 18:04:44 | INFO | train | epoch 088 | loss 3.102 | nll_loss 1.469 | distil_rate 0 | ppl 2.77 | wps 62909.2 | ups 2.2 | wpb 28537.4 | bsz 1156.1 | num_updates 12137 | lr 0.000492173 | gnorm 0.506 | loss_scale 16 | train_wall 54 | wall 5702
+2021-11-20 18:04:44 | INFO | fairseq.trainer | begin training epoch 89
+2021-11-20 18:05:11 | INFO | train_inner | epoch 089:     63 / 138 loss=3.092, nll_loss=1.457, distil_rate=0, ppl=2.75, wps=59608.7, ups=2.09, wpb=28569.8, bsz=1143.8, num_updates=12200, lr=0.000490901, gnorm=0.508, loss_scale=16, train_wall=39, wall=5729
+2021-11-20 18:05:41 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 18:05:44 | INFO | valid | epoch 089 | valid on 'valid' subset | loss 3.997 | nll_loss 2.374 | distil_rate 0 | ppl 5.18 | wps 166862 | wpb 11163.9 | bsz 455.2 | num_updates 12275 | best_loss 3.956
+2021-11-20 18:05:44 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 18:05:47 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint89.pt (epoch 89 @ 12275 updates, score 3.997) (writing took 3.543493553006556 seconds)
+2021-11-20 18:05:47 | INFO | fairseq_cli.train | end of epoch 89 (average epoch stats below)
+2021-11-20 18:05:47 | INFO | train | epoch 089 | loss 3.093 | nll_loss 1.459 | distil_rate 0 | ppl 2.75 | wps 62482.7 | ups 2.19 | wpb 28535.1 | bsz 1158.6 | num_updates 12275 | lr 0.000489399 | gnorm 0.507 | loss_scale 16 | train_wall 54 | wall 5765
+2021-11-20 18:05:47 | INFO | fairseq.trainer | begin training epoch 90
+2021-11-20 18:05:59 | INFO | train_inner | epoch 090:     25 / 138 loss=3.097, nll_loss=1.464, distil_rate=0, ppl=2.76, wps=59200.6, ups=2.08, wpb=28422.2, bsz=1163.6, num_updates=12300, lr=0.000488901, gnorm=0.514, loss_scale=16, train_wall=39, wall=5777
+2021-11-20 18:06:38 | INFO | train_inner | epoch 090:    125 / 138 loss=3.092, nll_loss=1.457, distil_rate=0, ppl=2.75, wps=73203, ups=2.56, wpb=28635.4, bsz=1169.4, num_updates=12400, lr=0.000486926, gnorm=0.497, loss_scale=16, train_wall=39, wall=5816
+2021-11-20 18:06:43 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 18:06:46 | INFO | valid | epoch 090 | valid on 'valid' subset | loss 4.019 | nll_loss 2.382 | distil_rate 0 | ppl 5.21 | wps 154214 | wpb 11163.9 | bsz 455.2 | num_updates 12413 | best_loss 3.956
+2021-11-20 18:06:46 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 18:06:51 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint90.pt (epoch 90 @ 12413 updates, score 4.019) (writing took 4.183734003003337 seconds)
+2021-11-20 18:06:51 | INFO | fairseq_cli.train | end of epoch 90 (average epoch stats below)
+2021-11-20 18:06:51 | INFO | train | epoch 090 | loss 3.087 | nll_loss 1.451 | distil_rate 0 | ppl 2.73 | wps 62264 | ups 2.18 | wpb 28538.7 | bsz 1158.8 | num_updates 12413 | lr 0.000486671 | gnorm 0.509 | loss_scale 16 | train_wall 54 | wall 5829
+2021-11-20 18:06:51 | INFO | fairseq.trainer | begin training epoch 91
+2021-11-20 18:07:27 | INFO | train_inner | epoch 091:     87 / 138 loss=3.073, nll_loss=1.435, distil_rate=0, ppl=2.7, wps=58891.5, ups=2.06, wpb=28521.5, bsz=1172.1, num_updates=12500, lr=0.000484974, gnorm=0.527, loss_scale=16, train_wall=39, wall=5865
+2021-11-20 18:07:47 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 18:07:50 | INFO | valid | epoch 091 | valid on 'valid' subset | loss 3.995 | nll_loss 2.369 | distil_rate 0 | ppl 5.16 | wps 163092 | wpb 11163.9 | bsz 455.2 | num_updates 12551 | best_loss 3.956
+2021-11-20 18:07:50 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 18:07:53 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint91.pt (epoch 91 @ 12551 updates, score 3.995) (writing took 3.4525313939957414 seconds)
+2021-11-20 18:07:53 | INFO | fairseq_cli.train | end of epoch 91 (average epoch stats below)
+2021-11-20 18:07:53 | INFO | train | epoch 091 | loss 3.081 | nll_loss 1.444 | distil_rate 0 | ppl 2.72 | wps 62917.3 | ups 2.2 | wpb 28535.1 | bsz 1159.2 | num_updates 12551 | lr 0.000483988 | gnorm 0.518 | loss_scale 16 | train_wall 54 | wall 5891
+2021-11-20 18:07:53 | INFO | fairseq.trainer | begin training epoch 92
+2021-11-20 18:08:14 | INFO | train_inner | epoch 092:     49 / 138 loss=3.077, nll_loss=1.44, distil_rate=0, ppl=2.71, wps=59700.9, ups=2.11, wpb=28351.6, bsz=1157.8, num_updates=12600, lr=0.000483046, gnorm=0.513, loss_scale=16, train_wall=39, wall=5912
+2021-11-20 18:08:49 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 18:08:52 | INFO | valid | epoch 092 | valid on 'valid' subset | loss 4.007 | nll_loss 2.379 | distil_rate 0 | ppl 5.2 | wps 182121 | wpb 11163.9 | bsz 455.2 | num_updates 12689 | best_loss 3.956
+2021-11-20 18:08:52 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 18:08:56 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint92.pt (epoch 92 @ 12689 updates, score 4.007) (writing took 3.6947841939982027 seconds)
+2021-11-20 18:08:56 | INFO | fairseq_cli.train | end of epoch 92 (average epoch stats below)
+2021-11-20 18:08:56 | INFO | train | epoch 092 | loss 3.073 | nll_loss 1.435 | distil_rate 0 | ppl 2.7 | wps 62789.5 | ups 2.2 | wpb 28545.8 | bsz 1159.7 | num_updates 12689 | lr 0.000481349 | gnorm 0.51 | loss_scale 16 | train_wall 54 | wall 5954
+2021-11-20 18:08:56 | INFO | fairseq.trainer | begin training epoch 93
+2021-11-20 18:09:02 | INFO | train_inner | epoch 093:     11 / 138 loss=3.078, nll_loss=1.441, distil_rate=0, ppl=2.71, wps=59923, ups=2.09, wpb=28689.7, bsz=1151.1, num_updates=12700, lr=0.00048114, gnorm=0.507, loss_scale=16, train_wall=39, wall=5960
+2021-11-20 18:09:42 | INFO | train_inner | epoch 093:    111 / 138 loss=3.066, nll_loss=1.427, distil_rate=0, ppl=2.69, wps=72125.5, ups=2.53, wpb=28543.6, bsz=1140.3, num_updates=12800, lr=0.000479257, gnorm=0.51, loss_scale=16, train_wall=39, wall=6000
+2021-11-20 18:09:52 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 18:09:55 | INFO | valid | epoch 093 | valid on 'valid' subset | loss 4.002 | nll_loss 2.376 | distil_rate 0 | ppl 5.19 | wps 160586 | wpb 11163.9 | bsz 455.2 | num_updates 12827 | best_loss 3.956
+2021-11-20 18:09:55 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 18:09:59 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint93.pt (epoch 93 @ 12827 updates, score 4.002) (writing took 3.5624538929987466 seconds)
+2021-11-20 18:09:59 | INFO | fairseq_cli.train | end of epoch 93 (average epoch stats below)
+2021-11-20 18:09:59 | INFO | train | epoch 093 | loss 3.066 | nll_loss 1.427 | distil_rate 0 | ppl 2.69 | wps 62420.8 | ups 2.19 | wpb 28531.3 | bsz 1156.4 | num_updates 12827 | lr 0.000478753 | gnorm 0.515 | loss_scale 16 | train_wall 54 | wall 6017
+2021-11-20 18:09:59 | INFO | fairseq.trainer | begin training epoch 94
+2021-11-20 18:10:30 | INFO | train_inner | epoch 094:     73 / 138 loss=3.05, nll_loss=1.409, distil_rate=0, ppl=2.66, wps=59205.7, ups=2.08, wpb=28516.9, bsz=1202, num_updates=12900, lr=0.000477396, gnorm=0.508, loss_scale=16, train_wall=39, wall=6048
+2021-11-20 18:10:55 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 18:10:58 | INFO | valid | epoch 094 | valid on 'valid' subset | loss 4.02 | nll_loss 2.39 | distil_rate 0 | ppl 5.24 | wps 172218 | wpb 11163.9 | bsz 455.2 | num_updates 12965 | best_loss 3.956
+2021-11-20 18:10:58 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 18:11:02 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint94.pt (epoch 94 @ 12965 updates, score 4.02) (writing took 3.58677443099441 seconds)
+2021-11-20 18:11:02 | INFO | fairseq_cli.train | end of epoch 94 (average epoch stats below)
+2021-11-20 18:11:02 | INFO | train | epoch 094 | loss 3.059 | nll_loss 1.419 | distil_rate 0 | ppl 2.67 | wps 62644.8 | ups 2.19 | wpb 28544.9 | bsz 1159.1 | num_updates 12965 | lr 0.000476198 | gnorm 0.506 | loss_scale 16 | train_wall 54 | wall 6080
+2021-11-20 18:11:02 | INFO | fairseq.trainer | begin training epoch 95
+2021-11-20 18:11:18 | INFO | train_inner | epoch 095:     35 / 138 loss=3.064, nll_loss=1.423, distil_rate=0, ppl=2.68, wps=59579.8, ups=2.1, wpb=28436.5, bsz=1131.1, num_updates=13000, lr=0.000475556, gnorm=0.519, loss_scale=16, train_wall=39, wall=6096
+2021-11-20 18:11:57 | INFO | train_inner | epoch 095:    135 / 138 loss=3.062, nll_loss=1.423, distil_rate=0, ppl=2.68, wps=72768.5, ups=2.53, wpb=28771.3, bsz=1160.6, num_updates=13100, lr=0.000473738, gnorm=0.508, loss_scale=26, train_wall=39, wall=6135
+2021-11-20 18:11:58 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 18:12:01 | INFO | valid | epoch 095 | valid on 'valid' subset | loss 4.008 | nll_loss 2.379 | distil_rate 0 | ppl 5.2 | wps 164662 | wpb 11163.9 | bsz 455.2 | num_updates 13103 | best_loss 3.956
+2021-11-20 18:12:01 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 18:12:05 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint95.pt (epoch 95 @ 13103 updates, score 4.008) (writing took 3.9793721399910282 seconds)
+2021-11-20 18:12:05 | INFO | fairseq_cli.train | end of epoch 95 (average epoch stats below)
+2021-11-20 18:12:05 | INFO | train | epoch 095 | loss 3.052 | nll_loss 1.411 | distil_rate 0 | ppl 2.66 | wps 62164.3 | ups 2.18 | wpb 28534.8 | bsz 1158.7 | num_updates 13103 | lr 0.000473684 | gnorm 0.518 | loss_scale 24 | train_wall 54 | wall 6143
+2021-11-20 18:12:05 | INFO | fairseq.trainer | begin training epoch 96
+2021-11-20 18:12:45 | INFO | train_inner | epoch 096:     97 / 138 loss=3.033, nll_loss=1.388, distil_rate=0, ppl=2.62, wps=59188.7, ups=2.08, wpb=28473.6, bsz=1165.1, num_updates=13200, lr=0.00047194, gnorm=0.514, loss_scale=32, train_wall=39, wall=6183
+2021-11-20 18:13:01 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 18:13:04 | INFO | valid | epoch 096 | valid on 'valid' subset | loss 4.017 | nll_loss 2.387 | distil_rate 0 | ppl 5.23 | wps 184365 | wpb 11163.9 | bsz 455.2 | num_updates 13241 | best_loss 3.956
+2021-11-20 18:13:04 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 18:13:08 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint96.pt (epoch 96 @ 13241 updates, score 4.017) (writing took 3.461697278005886 seconds)
+2021-11-20 18:13:08 | INFO | fairseq_cli.train | end of epoch 96 (average epoch stats below)
+2021-11-20 18:13:08 | INFO | train | epoch 096 | loss 3.047 | nll_loss 1.404 | distil_rate 0 | ppl 2.65 | wps 63027.7 | ups 2.21 | wpb 28537.3 | bsz 1158.1 | num_updates 13241 | lr 0.000471209 | gnorm 0.513 | loss_scale 32 | train_wall 54 | wall 6206
+2021-11-20 18:13:08 | INFO | fairseq.trainer | begin training epoch 97
+2021-11-20 18:13:33 | INFO | train_inner | epoch 097:     59 / 138 loss=3.044, nll_loss=1.401, distil_rate=0, ppl=2.64, wps=59717.4, ups=2.1, wpb=28472.4, bsz=1161.6, num_updates=13300, lr=0.000470162, gnorm=0.514, loss_scale=32, train_wall=39, wall=6231
+2021-11-20 18:14:04 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 18:14:07 | INFO | valid | epoch 097 | valid on 'valid' subset | loss 4.011 | nll_loss 2.385 | distil_rate 0 | ppl 5.23 | wps 184234 | wpb 11163.9 | bsz 455.2 | num_updates 13379 | best_loss 3.956
+2021-11-20 18:14:07 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 18:14:11 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint97.pt (epoch 97 @ 13379 updates, score 4.011) (writing took 4.17811205900216 seconds)
+2021-11-20 18:14:11 | INFO | fairseq_cli.train | end of epoch 97 (average epoch stats below)
+2021-11-20 18:14:11 | INFO | train | epoch 097 | loss 3.041 | nll_loss 1.397 | distil_rate 0 | ppl 2.63 | wps 62328.4 | ups 2.18 | wpb 28534.9 | bsz 1157.8 | num_updates 13379 | lr 0.000468772 | gnorm 0.512 | loss_scale 32 | train_wall 54 | wall 6269
+2021-11-20 18:14:11 | INFO | fairseq.trainer | begin training epoch 98
+2021-11-20 18:14:21 | INFO | train_inner | epoch 098:     21 / 138 loss=3.049, nll_loss=1.407, distil_rate=0, ppl=2.65, wps=59364.4, ups=2.09, wpb=28457.5, bsz=1128.9, num_updates=13400, lr=0.000468405, gnorm=0.525, loss_scale=32, train_wall=39, wall=6279
+2021-11-20 18:15:00 | INFO | train_inner | epoch 098:    121 / 138 loss=3.029, nll_loss=1.384, distil_rate=0, ppl=2.61, wps=73105, ups=2.54, wpb=28788.4, bsz=1191.6, num_updates=13500, lr=0.000466667, gnorm=0.498, loss_scale=32, train_wall=39, wall=6318
+2021-11-20 18:15:07 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 18:15:10 | INFO | valid | epoch 098 | valid on 'valid' subset | loss 4.021 | nll_loss 2.39 | distil_rate 0 | ppl 5.24 | wps 183601 | wpb 11163.9 | bsz 455.2 | num_updates 13517 | best_loss 3.956
+2021-11-20 18:15:10 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 18:15:14 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint98.pt (epoch 98 @ 13517 updates, score 4.021) (writing took 4.67811976998928 seconds)
+2021-11-20 18:15:14 | INFO | fairseq_cli.train | end of epoch 98 (average epoch stats below)
+2021-11-20 18:15:14 | INFO | train | epoch 098 | loss 3.034 | nll_loss 1.39 | distil_rate 0 | ppl 2.62 | wps 61936.5 | ups 2.17 | wpb 28537.2 | bsz 1158.2 | num_updates 13517 | lr 0.000466373 | gnorm 0.512 | loss_scale 32 | train_wall 54 | wall 6332
+2021-11-20 18:15:14 | INFO | fairseq.trainer | begin training epoch 99
+2021-11-20 18:15:49 | INFO | train_inner | epoch 099:     83 / 138 loss=3.029, nll_loss=1.383, distil_rate=0, ppl=2.61, wps=58416.5, ups=2.05, wpb=28464.2, bsz=1135.9, num_updates=13600, lr=0.000464948, gnorm=0.516, loss_scale=32, train_wall=39, wall=6367
+2021-11-20 18:16:11 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 18:16:14 | INFO | valid | epoch 099 | valid on 'valid' subset | loss 4.038 | nll_loss 2.406 | distil_rate 0 | ppl 5.3 | wps 169066 | wpb 11163.9 | bsz 455.2 | num_updates 13655 | best_loss 3.956
+2021-11-20 18:16:14 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 18:16:17 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint99.pt (epoch 99 @ 13655 updates, score 4.038) (writing took 3.8628800000005867 seconds)
+2021-11-20 18:16:18 | INFO | fairseq_cli.train | end of epoch 99 (average epoch stats below)
+2021-11-20 18:16:18 | INFO | train | epoch 099 | loss 3.028 | nll_loss 1.382 | distil_rate 0 | ppl 2.61 | wps 62469.4 | ups 2.19 | wpb 28537.7 | bsz 1156.7 | num_updates 13655 | lr 0.000464011 | gnorm 0.517 | loss_scale 32 | train_wall 54 | wall 6396
+2021-11-20 18:16:18 | INFO | fairseq.trainer | begin training epoch 100
+2021-11-20 18:16:37 | INFO | train_inner | epoch 100:     45 / 138 loss=3.026, nll_loss=1.381, distil_rate=0, ppl=2.6, wps=59140.1, ups=2.08, wpb=28412.5, bsz=1169.4, num_updates=13700, lr=0.000463248, gnorm=0.523, loss_scale=32, train_wall=39, wall=6415
+2021-11-20 18:17:14 | INFO | fairseq_cli.train | begin validation on "valid" subset
+2021-11-20 18:17:17 | INFO | valid | epoch 100 | valid on 'valid' subset | loss 4.025 | nll_loss 2.392 | distil_rate 0 | ppl 5.25 | wps 185072 | wpb 11163.9 | bsz 455.2 | num_updates 13793 | best_loss 3.956
+2021-11-20 18:17:17 | INFO | fairseq_cli.train | begin save checkpoint
+2021-11-20 18:17:20 | INFO | fairseq.checkpoint_utils | saved checkpoint checkpoints/base-iwlst-de-en/transformer_iwlst14de2en/checkpoint100.pt (epoch 100 @ 13793 updates, score 4.025) (writing took 3.609619381997618 seconds)
+2021-11-20 18:17:20 | INFO | fairseq_cli.train | end of epoch 100 (average epoch stats below)
+2021-11-20 18:17:20 | INFO | train | epoch 100 | loss 3.023 | nll_loss 1.377 | distil_rate 0 | ppl 2.6 | wps 62772.8 | ups 2.2 | wpb 28553.1 | bsz 1158.7 | num_updates 13793 | lr 0.000461683 | gnorm 0.512 | loss_scale 32 | train_wall 54 | wall 6458
+2021-11-20 18:17:20 | INFO | fairseq_cli.train | done training in 6458.1 seconds

@@ -1,0 +1,14 @@
+Namespace(align_suffix=None, alignfile=None, all_gather_list_size=16384, bf16=False, bpe=None, checkpoint_suffix='', cpu=False, criterion='cross_entropy', dataset_impl='mmap', decay_num=100000, destdir='data-bin/iwslt14de2en', difficult_queue_size=20000, distil_curiosity_rate=0.75, distil_rate=0.5, distil_rate_decrease_start_step=-1, distil_schedule='unchange', distil_strategy='normal', distil_weight_strategy='', embedding_alpha=1.0, embedding_norm='', empty_cache_freq=0, fp16=False, fp16_init_scale=128, fp16_no_flatten_grads=False, fp16_scale_tolerance=0.0, fp16_scale_window=None, joined_dictionary=True, kd_rescale=1.0, kl_loss_combine_rate=0.5, log_format=None, log_interval=100, lr_scheduler='fixed', memory_efficient_bf16=False, memory_efficient_fp16=False, min_loss_scale=0.0001, mix_schedule='teacher', model_parallel_size=1, no_progress_bar=False, nwordssrc=-1, nwordstgt=-1, only_source=False, open_noise_teacher=False, optimizer=None, padding_factor=8, predict_change_margin=0.23, profile=False, quantization_config_path=None, seed=None, sigmoid_alpha=10, sigmoid_mid=0.5, soft_range=1.0, source_lang='de', srcdict=None, target_lang='en', task='translation', teacher_ckpt_path='', teacher_decoder_layers=6, teacher_distil_rate=0.5, teacher_encoder_layers=6, teacher_predict_temperature=1.0, teacher_predict_temperature_schedule='none', teacher_strategy='', tensorboard_logdir='', testpref='../../data/iwlst14/iwslt14.tokenized.de-en//test', tgtdict=None, threshold_loss_scale=None, thresholdsrc=0, thresholdtgt=0, tokenizer=None, tpu=False, trainpref='../../data/iwlst14/iwslt14.tokenized.de-en//train', use_distillation=False, user_dir=None, validpref='../../data/iwlst14/iwslt14.tokenized.de-en//valid', workers=64, zero_first_token=False)
+[de] Dictionary: 10152 types
+[de] ../../data/iwlst14/iwslt14.tokenized.de-en//train.de: 160239 sents, 4035591 tokens, 0.0% replaced by <unk>
+[de] Dictionary: 10152 types
+[de] ../../data/iwlst14/iwslt14.tokenized.de-en//valid.de: 7283 sents, 182592 tokens, 0.0% replaced by <unk>
+[de] Dictionary: 10152 types
+[de] ../../data/iwlst14/iwslt14.tokenized.de-en//test.de: 6750 sents, 161838 tokens, 0.029% replaced by <unk>
+[en] Dictionary: 10152 types
+[en] ../../data/iwlst14/iwslt14.tokenized.de-en//train.en: 160239 sents, 3949114 tokens, 0.0% replaced by <unk>
+[en] Dictionary: 10152 types
+[en] ../../data/iwlst14/iwslt14.tokenized.de-en//valid.en: 7283 sents, 178622 tokens, 0.00056% replaced by <unk>
+[en] Dictionary: 10152 types
+[en] ../../data/iwlst14/iwslt14.tokenized.de-en//test.en: 6750 sents, 156928 tokens, 0.00319% replaced by <unk>
+Wrote preprocessed data to data-bin/iwslt14de2en
